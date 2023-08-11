@@ -1,0 +1,70 @@
+.card-sliders {
+    margin-bottom: 8rem;
+
+    h2 {
+        max-width: 545px;
+        margin: 0 auto 3rem;
+    }
+
+    a {
+        text-decoration: none;
+    }
+
+    .slick-list {
+        margin: 0 -10px;
+    }
+
+    .card-slider-item {
+        padding: 0 10px;
+    }
+
+    .text {
+        margin-bottom: $paragraph-margin-bottom;
+        color: rgba(26, 27, 30, 0.7);
+
+        *:last-child {
+            margin-bottom: 0;
+        }
+    }
+
+    .inside {
+        color: white;
+        background: $primary;
+        height: 100%;
+        border-radius: 1rem;
+        position: relative;
+        padding: 5px 5px 5px 5px;
+
+        h3 {
+            color: inherit
+        }
+
+        .ratio-16x9 {
+            margin: 0 auto 2rem;
+
+            &::before {
+                padding-top: 72%;
+            }
+        }
+
+        img {
+            object-fit: cover;
+            width: 100%;
+            border-radius: .8rem .8rem 0 0;
+
+        }
+    }
+
+
+
+    .slick-track {
+        display: flex !important;
+    }
+
+    .slick-slide {
+
+        height: inherit !important;
+    }
+
+
+}

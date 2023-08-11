@@ -1,0 +1,80 @@
+.breadcrumb-container {
+   padding-top: 3rem;
+   margin-bottom: 3rem;
+   padding-bottom: 3rem; 
+   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+   font-size: 1.8rem;
+  
+   span {
+        font-size: 1.6rem;
+       margin-right: .5rem;
+       span {
+        color: rgba(26, 27, 30, 0.7);
+       }
+        margin-left: .5rem;
+        &:first-child {
+            margin-left: 0
+       }
+   }
+   a {
+    color: rgba(26, 27, 30, 0.5);
+    text-decoration: none;
+        span {
+            color: rgba(26, 27, 30, 0.5);
+        } 
+    }
+}
+.page-id-125,.page-id-628 {
+    .breadcrumb-container {
+        border-bottom: none;
+        padding-bottom: 0;
+        margin-bottom: 1rem;
+    }
+    .the-content {
+        h1 {
+            max-width: 60%;
+            margin: 0 0 4rem;
+        }
+    }
+    .is-layout-flex {
+       margin-bottom: 3rem;
+       
+        p {
+            margin:0;
+            
+            strong {
+            color: #1A1B1E;
+        }
+        a {
+           color: rgba(26, 27, 30, 0.7);
+
+            text-decoration: none;
+        }
+        }
+        gap: 10rem;
+        h4 {
+            padding-bottom: 2rem;
+            margin-bottom: 2rem;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+        }
+    }
+    @include media-breakpoint-down(lg) {
+     
+        .the-content {
+            h1 {
+                max-width: 100%;
+            }
+        }
+        .is-layout-flex {
+            gap: 1.5rem;
+            h4 {
+                padding-bottom:0;
+                margin-bottom: 2rem;
+                border-bottom: none;
+            }
+        }
+        .wpcf7 {
+            margin-bottom: 3rem;
+        }
+    }
+}

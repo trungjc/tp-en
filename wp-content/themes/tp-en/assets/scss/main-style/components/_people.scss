@@ -1,0 +1,25 @@
+.people-posts {
+    .name {
+        color: white;
+        padding: 2.4rem;
+        text-align: left;
+        background: linear-gradient(90deg, #0A804F 8.11%, #209B68 89.33%);
+
+    }
+
+    .people-item-image {
+        overflow: hidden;
+        border-radius: 50px 50px 0 0;
+        display: block;
+
+        &:before {
+            padding-top: 120%;
+        }
+
+        img {
+            object-fit: cover;
+            border-radius: 50px 50px 0 0;
+        }
+
+    }
+}

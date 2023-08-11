@@ -1,0 +1,13 @@
+//@import "bootstrap";
+@import "../../../node_modules/bootstrap/scss/functions";
+@import "../variable/variable";
+@import "../../../node_modules/bootstrap/scss/mixins";
+//@import "../../../node_modules/bootstrap/scss/buttons";
+@import "../variable/mixins";
+@import "utilities";
+@import "typo";
+@import "animate";
+@import "fonts/index";
+@import "share/index";
+@import "components/index";
+@import "pages/index";

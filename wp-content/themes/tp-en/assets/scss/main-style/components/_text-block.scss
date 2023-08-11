@@ -1,0 +1,137 @@
+.text-block {
+  margin-bottom: 8rem;
+  background-repeat: no-repeat;
+  background-position: left bottom;
+  &.has-bg {
+    margin-bottom: 0;
+    padding-bottom: 10rem;
+  }
+    
+  p {
+      margin-bottom: 3rem;
+  }
+  .sub-title {
+        color:rgba(26, 27, 30, 0.7);
+      border-bottom:  1px solid rgba(0, 0, 0, 0.1) ;
+  }
+  @include media-breakpoint-up(lg) {
+      .col-md-6:first-child {
+          padding-right: 13rem;
+      }
+  }
+  @include media-breakpoint-down(md) {
+    background: none!important;
+    &.has-bg {
+        margin-bottom: 0;
+        padding-bottom: 4rem;
+    }
+ }
+}
+.breadcrumb-container {
+    & + .text-block {
+        .sub-title {
+            border: none;
+            font-weight: 700;
+font-size: 20px;
+color: $teal;
+        }
+    }
+}
+.page-id-40,.page-id-595  {
+    .breadcrumb-container {
+        border: none;
+        margin-bottom:0;
+    } 
+}
+
+.text-2-block {
+    .intro {
+        @include media-breakpoint-up(lg) {
+            padding-left: 6rem;
+        }
+        h5 {
+            margin-bottom: 3rem;
+        }
+       
+        p {
+            color: rgba(26, 27, 30, 0.5);
+        }
+        table {
+            td {
+                vertical-align: middle;
+                img {
+                    max-width: 30px;
+                    margin-right: 10px;
+                }
+            }
+        }
+        h3{
+            margin: 0;
+        }
+    }
+}
+
+.text-vision-block {
+    padding-top: 12rem;
+    background: linear-gradient(180deg, #243468 0%, #020C2D 100%);
+    color: rgba(255, 255, 255, 0.7);
+    h4,h5 {
+        color: #6AC9C8;
+    }
+    h2 {
+        color: white;
+    }
+    .heading {
+        text-align: center;
+        font-size: 1.8rem;
+    }
+    .text-block-inside {
+        background: url("../images/map-white.png") no-repeat center center ;
+    }
+    .block {
+        min-height: 140px;
+    } 
+    .block + .block {
+        margin-top: 6rem;
+    }
+    @include media-breakpoint-down(lg) {
+        padding-top: 6rem;
+        padding-bottom: 6rem;
+        .block {
+            min-height: 100px;
+            margin-bottom:2rem;
+        } 
+        .block + .block {
+            margin-top: 0rem;
+        }
+    }
+}
+@include media-breakpoint-down(md) {
+    .partner-slider  .col-md-2 {
+        width: 140px;
+    }
+    .text-block {
+        margin-bottom: 4rem;
+    }
+}
+
+.links {
+    margin-top: 3rem;
+    flex-wrap: wrap;
+    a {
+        padding:1.8rem 1.8rem 1.8rem 6rem;
+        display: block;
+        color: inherit;
+        text-decoration: none;
+        background: #FFFFFF;
+        box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.04), 0px 8px 16px rgba(0, 0, 0, 0.08);
+        border-radius: 12px;
+        background: url(../images/PDF.svg) no-repeat left 12px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        &:hover {
+            color: $link-color;
+        }
+    }
+}

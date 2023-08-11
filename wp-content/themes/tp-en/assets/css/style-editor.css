@@ -1,0 +1,48 @@
+body.gutenberg-editor-page .editor-post-title__block, body.gutenberg-editor-page .editor-default-block-appender, body.gutenberg-editor-page .editor-block-list__block {
+    max-width: none !important;
+}
+.block-editor__container .wp-block {
+    max-width: none !important;
+}
+
+#menu-posts-document li:last-child{
+    display: none;
+}
+
+.acf-field-5fc472f8c4dee {
+    overflow-x: auto;
+}
+
+.acf-field-5fc472f8c4dee > .acf-input {
+    width: 100vw;
+}
+
+.acf-field input[type="text"]:disabled {
+    box-shadow: none;
+    border: none;
+    padding: 0!important;
+    color: #000!important;
+    font-weight: bold;
+}
+
+/* .acf-field[data-name="data_unit_price"] .acf-row {
+    display: none;
+} */
+
+/* .acf-field[data-name="data_unit_price"] .acf-row[data-id="row-0"],
+.acf-field[data-name="data_unit_price"] .acf-row[data-id="row-2"],
+.acf-field[data-name="data_unit_price"] .acf-row[data-id="row-3"],
+.acf-field[data-name="data_unit_price"] .acf-row[data-id="row-4"],
+.acf-field[data-name="data_unit_price"] .acf-row[data-id="row-5"],
+.acf-field[data-name="data_unit_price"] .acf-row[data-id="row-6"],
+.acf-field[data-name="data_unit_price"] .acf-row[data-id="row-7"],
+.acf-field[data-name="data_unit_price"] .acf-row[data-id="row-8"],
+.acf-field[data-name="data_unit_price"] .acf-row[data-id="row-9"],
+.acf-field[data-name="data_unit_price"] .acf-row:not([data-id^="row-"])
+{
+    display: table-row;
+} */
+/* .acf-field[data-name="data_unit_price"] .acf-row:nth-last-child(-n+11)
+{
+    display: table-row;
+} */
