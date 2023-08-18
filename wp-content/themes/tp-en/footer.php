@@ -13,7 +13,10 @@ $company_name = get_field('company_name', 'option') ?: '';
 ?>
 <footer class="footer">
     <div class="flex items-center text-2xl">
-        <div class="footer__logo"></div>
+        <a href="<?php echo home_url(); ?>" class="footer__logo">
+            
+        </a>
+
         <span class="font-bold sm:text-xl"><?php echo $logoText ?></span>
     </div>
     <div class="footer__inner">
