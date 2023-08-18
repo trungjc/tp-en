@@ -1,79 +1,79 @@
 <?php
+echo '<div class="job-detail">';
 get_header();
 global $post;
 $salary = get_field('salary');
 $date = get_field('date');
 $address = get_field('address');
-echo '<main class="main">'; ?>
+$department = get_field('department');
+$role = get_field('role');
+$btnText = get_field('send_cv_text');
+$jobDetail = get_field('job_detail');
+$shortCode = get_field('short_code');
+echo '<main class="main" id="page-job-detail">'; ?>
 
 <?php
 if (have_posts()) :
     while (have_posts()) : the_post(); ?>
-        <div class="container breadcrumb-container">
-            <?php bcn_display(); ?>
-        </div>
-        <div class="container ">
 
-            <div class="row  justify-content-between the-content">
-
-                <div class="col-md-7">
-                    <article <?php post_class(); ?>>
-                        <header class="entry-header mb-5">
-                            <?php
-                            the_title('<h1 class="entry-title">', '</h1>');
-                            ?>
-                        </header>
-                        <div class="entry-content">
-                            <div class="r-salary mb-4">
-                                <?php echo $salary ?>
-                            </div>
-                            <div class="r-date mb-4">
-                                <?php echo $date ?>
-                            </div>
-                            <div class="r-address mb-4">
-                                <?php echo $address ?>
-                            </div>
-                            <div class="mb-5 mt-5"> <?php the_content(); ?></div>
-                            <div class="share d-flex align-items-center">
-                                <span class="f-700"><?php pll_e('Chia sẻ'); ?>:</span>
-                                <div class='skype-share me-3' data-href='<?php the_permalink(); ?>' data-lang='en-US' data-text='<?php the_title(); ?>' data-style='large'></div>
-                                <a class="iicon-fb me-3" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=<?php the_permalink() ?>"></a>
-                                <a class="iicon-twitter me-3" target="_blank" href="http://twitter.com/share?text=<?php the_title() ?>&url=<?php the_permalink() ?>"></a>
+        <div class="">
+            <div id="recruitment-modal" class="hidden">
+                <div class="modal">
+                    <div class="modal__background"></div>
+                    <div class="modal__content">
+                        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/btn-x.svg" alt="" class="modal__close" />
+                        <div class="recruitment-form">
+                            <div class="recruitment-form__img"></div>
+                            <div class="recruitment-form__content">
+                                <h3>Đơn ứng tuyển</h3>
+                              <?php if (pll_current_language() == 'en') {
+                                echo do_shortcode('[contact-form-7 id="258" title="Form ứng tuyển english"]');
+                              } else {
+                                echo do_shortcode('[contact-form-7 id="255" title="Form ứng tuyển"]');
+                              } ?>
+<!--                                <input type="text" placeholder="Họ và tên (*)" />-->
+<!--                                <div class="flex gap-4 sm:block">-->
+<!--                                    <input type="text" placeholder="Số điện thoại (*)" />-->
+<!--                                    <input type="text" placeholder="Email (*)" />-->
+<!--                                </div>-->
+<!--                                <input type="file" placeholder="Đính kèm CV" />-->
+<!--                                <textarea placeholder="Nội dung" rows="10"></textarea>-->
+<!---->
+<!--                                <div class="btn-search text-center mt-4">Ứng tuyển</div>-->
                             </div>
                         </div>
-                    </article>
+                    </div>
                 </div>
-                <div class="col-md-3">
-                    <?php
-
-                    $args = array(
-                        'post_type' => 'recruitment',
-                        'posts_per_page' => 10,
-                        'post__not_in' => array($post->ID)
-                    );
-                    $query = new WP_Query($args);
-                    if ($query->have_posts()) :
-                    ?>
-                        <h4 class="mb-4 pb-4 r-heading"><?php pll_e('Việc làm khác'); ?></h4>
-
-                        <?php while ($query->have_posts()) : $query->the_post();
-                            $title = $post->post_title;
-                            $city = get_field('city');
-                            $link = get_post_permalink($post->ID);
-                            $date = get_field('date');
-                        ?>
-                            <div class="r-item mb-4 pb-4">
-                                <div class="f-300 f-14 text-nuted">
-                                    <?php echo $date ?> - <?php echo $city ?>
-                                </div>
-                                <div class="f-16 f-700 h4 mb-0">
-                                    <a href="<?php echo $link ?>" class="text-decoration-none text-heading"><?php echo $title ?></a>
-                                </div>
+            </div>
+            <div class="flex">
+                <div class="job-detail__title">
+                    <div>
+                        <div
+                                class="btn-primary btn-primary--no-icon mb-4 pointer-events-none"
+                        >
+                            <?php echo $department ?>
+                        </div>
+                        <h1><?php echo the_title() ?></h1>
+                        <div class="job-detail__info">
+                            <div class="flex items-center sm:mt-4">
+                                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/location-white.svg" alt="" />
+                                <span class="text-xl ml-2 sm:text-[12px]"
+                                ><?php echo $address ?>aaa</span
+                                >
                             </div>
-                        <?php endwhile; ?>
-                    <?php wp_reset_postdata();
-                    endif; ?>
+                            <div class="flex items-center mt-6 sm:mt-5">
+                                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/vnd-white.svg" alt="" />
+                                <span class="text-xl ml-2 sm:text-[12px]"
+                                ><?php echo $salary ?></span
+                                >
+                            </div>
+                        </div>
+                    </div>
 
+                    <div class="btn-secondary" id="open-send-cv-form"><?php echo $btnText ?></div>
+                </div>
+                <div class="job-detail__content">
+                  <?php echo $jobDetail ?>
                 </div>
             </div>
         </div>
@@ -86,3 +86,4 @@ endif;
 echo '</main>';
 
 get_footer();
+echo '</div>';

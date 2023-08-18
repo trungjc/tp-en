@@ -154,76 +154,59 @@ function editor_custom_fonts()
 
 function theme_one_scripts()
 {
+
 	$root_css = get_template_directory_uri() . '/assets/css/';
 	$root_js = get_template_directory_uri() . '/assets/js/';
 
-	wp_enqueue_style('bootstrap', $root_css . 'bootstrap.css');
-	wp_enqueue_style('fancy', $root_css . 'fancybox.css');
+	wp_enqueue_style('swiper-bundle.min', $root_css . 'swiper-bundle.min.css');
+	wp_enqueue_style('aos', $root_css . 'aos.css');
+	wp_enqueue_style('style', get_template_directory_uri() .'/style.css');
 	wp_enqueue_style('main', $root_css . 'main.css');
+	wp_enqueue_style('vietnam-pro-font', 'https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@300;400;500;700&family=Rubik:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&display=swap');
 
-	wp_enqueue_script(
-		'popper',
-		$root_js . 'lib/popper.min.js',
+    wp_enqueue_script(
+		'jquery1',
+		$root_js . 'lib/jquery.min.js',
 		array('jquery'),
 		false,
 		true
 	);
-	wp_enqueue_script(
-		'bootstrap',
-		$root_js . 'lib/bootstrap.js',
-		array('jquery'),
-		false,
-		true
-	);
-	wp_enqueue_script(
-		'slick-carousel',
-		$root_js . 'lib/slick-carousel/slick/slick.js',
-		array('jquery'),
-		false,
-		true
-	);
-	wp_enqueue_script(
-		'woowjs',
-		$root_js . 'lib/woowjs.js',
-		array('jquery'),
-		false,
-		true
-	);
-	// wp_enqueue_script(
-	// 	'parallax',
-	// 	$root_js . 'lib/parallax.min.js',
-	// 	array('jquery'),
-	// 	false,
-	// 	true
-	// );
-	// wp_enqueue_script(
-	// 	'fancybox',
-	// 	$root_js . 'lib/fancybox.js',
-	// 	array('jquery'),
-	// 	false,
-	// 	true
-	// );
-	// wp_enqueue_script(
-	// 	'validate',
-	// 	$root_js . 'lib/jquery.validate.min.js',
-	// 	array('jquery'),
-	// 	false,
-	// 	true
-	// );
-	// wp_enqueue_script(
-	// 	'vimeo',
-	// 	'https://player.vimeo.com/api/player.js',
-	// 	array('jquery'),
-	// 	false,
-	// 	true
-	// );
-	//   wp_enqueue_script(
-	//     'select',
-	//     $root_js . 'lib/select2.min.js',
-	//     array('jquery'),
-	//     false,
-	//     true
-	//   );
+ 	wp_enqueue_script(
+ 		'swiper',
+ 		$root_js . 'lib/swiper-bundle.min.js',
+ 		array('jquery'),
+ 		false,
+ 		true
+ 	);
+ 	wp_enqueue_script(
+ 		'gasp',
+ 		$root_js . 'lib/gsap.min.js',
+ 		array('jquery'),
+ 		false,
+ 		true
+ 	);
+ 	wp_enqueue_script(
+ 		'aos',
+ 		$root_js . 'lib/aos.js',
+ 		array('jquery'),
+ 		false,
+ 		true
+ 	);
+	 wp_enqueue_script(
+	 	'ScrollTrigger',
+	 	$root_js . 'lib/ScrollTrigger.min.js',
+	 	array('jquery'),
+	 	false,
+	 	true
+	 );
+	 wp_enqueue_script(
+	 	'ScrollToPlugin',
+	 	$root_js . 'lib/ScrollToPlugin.min.js',
+	 	array('jquery'),
+	 	false,
+	 	true
+	 );
+
 	wp_enqueue_script(
 		'main-js',
 		$root_js . 'all.js',

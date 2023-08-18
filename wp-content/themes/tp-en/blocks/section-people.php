@@ -1,49 +1,44 @@
 <?php
 $title = get_sub_field('title');
+$subTitle = get_sub_field('sub_title');
 $description = get_sub_field('description');
-$peoples = get_sub_field('peoples');
-
+$images = get_sub_field('images');
+$link = get_sub_field('link');
 ?>
-<section class="people-posts text-center tpl-block bg-grey wow fadeInUp" data-wow-duration=".3s" data-wow-delay=".3s">
-  <div class="container">
-    <div class="people-heading mb-5 pb-5">
-      <h2 class="title">
-        <?php echo $title ?>
-      </h2>
-      <div class="mb-5">
-        <?php echo $description ?>
-      </div>
-    </div>
 
-    <div class="sliders-people ">
-      <?php if ($peoples) : ?>
-        <?php $i = 0;
-
-        foreach ($peoples as $people) : ?>
-          <?php if (isset($people)) : ?>
-            <?php
-            $p_id = $people->ID;
-            // $image = $people->image ?: '';
-            $name = $people->post_title;
-            $link = '';
-            $detail = $people->post_content ?: '';
-            ?>
-            <div class="people-item position-relative px-3">
-              <a class="people-item-image ratio ratio-16x9" href="<?php echo  $link['url'] ?>">
-                <?php echo get_the_post_thumbnail($p_id, 'large'); ?>
+<section class="container life">
+    <div class="life__left">
+        <div class="life-pc">
+            <p class="life__sub-title"><?php echo $subTitle ?></p>
+            <p class="life__title">
+              <?php echo $title ?>
+            </p>
+        </div>
+        <div class="life__text">
+          <?php echo $description ?>
+        </div>
+      <?php if ($link) : ?>
+          <div class="life__btn">
+              <a class="btn-primary btn-primary--black" href="<?php echo $link['url'] ?>">
+                  <span><?php echo $link['title'] ?></span>
               </a>
-              <h3 class="h5 mb-0 name">
-                <?php echo $name ?>
-              </h3>
-              <div class="detail d-none">
-                <?php echo $detail ?>
-              </div>
-
-            </div>
-          <?php endif; ?>
-        <?php
-        endforeach; ?>
+          </div>
       <?php endif; ?>
+
     </div>
-  </div>
+
+    <div class="life__right">
+        <div class="life-sp">
+            <p class="life__sub-title"><?php echo $subTitle ?></p>
+            <p class="life__title">
+              <?php echo $title ?>
+            </p>
+        </div>
+        <div class="life__imgs">
+          <?php foreach ($images as $key => $value): ?>
+              <div class="life__img life__img-<?php echo $key + 1 ?>" style="background-image: url('<?php echo $value['image']['url'] ?>')"></div>
+          <?php endforeach; ?>
+
+        </div>
+    </div>
 </section>

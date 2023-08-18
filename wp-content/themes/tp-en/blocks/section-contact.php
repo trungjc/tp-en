@@ -1,39 +1,36 @@
 <?php
 
-$images = get_field('images', 'option') ?: '';
-$short_code = get_field('short_code', 'option') ?: '';
-$title = get_field('title', 'option') ?: '';
-$description = get_field('description', 'option') ?: '';
+$hotline = get_field('hotline', 'option') ?: '';
+$address = get_field('address', 'option') ?: '';
+$email = get_field('email', 'option') ?: '';
+$title = get_sub_field('title');
+$subTitle = get_sub_field('sub_title');
+$shortCode = get_sub_field('short_code');
+$image = get_sub_field('image');
 ?>
 
-<section class="tpl-block tpl-contact p-0">
-    <div class="container-fluid p-0 container-fluid-full ">
-        <div class="row g-0 ">
-            <div class="col-lg-6 ">
-                <?php if ($images) : ?>
-                    <div class="image-slider">
-                        <?php foreach ($images as $image) { ?>
-                            <?php
-                            $img = $image['image'];
-                            ?>
-                            <?php if ($img) : ?>
-                                <img src="<?php echo $img['sizes']['large'] ?>" alt="<?php echo $img['alt'] ?>" />
-                            <?php endif; ?>
-                        <?php } ?>
-                    </div>
-                <?php endif; ?>
-            </div>
-            <div class="col-lg-6  col-md-6-right ">
-                <div class="p-5 my-4 my-lg-0 mx-md-5 tpl-contact-right ">
-                    <h2 class="title mb-4">
-                        <?php echo $title ?>
-                    </h2>
-                    <div class="des mb-5 f-20">
-                        <?php echo $description ?>
-                    </div>
-                    <?php echo do_shortcode($short_code); ?>
-                </div>
-            </div>
+<div class="container mx-auto contact__container" style="background-image: url(<?php echo $image['url'] ?>);">
+    <div class="contact__inner">
+        <div class="contact__form">
+            <p class="contact__form-sub"><?php echo $subTitle ?></p>
+            <p class="contact__form-title"><?php echo $title ?></p>
+            <p class="contact__form-text">
+              <?php echo $address ?>
+
+            </p>
+            <p class="contact__form-text">Hotline: <?php echo $hotline ?></p>
+            <p class="contact__form-text">Email: <?php echo $email ?></p>
+          <?php echo do_shortcode($shortCode) ?>
+<!--            <form class="mt-12">-->
+<!--                <input type="text" placeholder="Họ và tên (*)" />-->
+<!--                <div class="flex gap-4">-->
+<!--                    <input type="text" placeholder="Số điện thoại (*)" />-->
+<!--                    <input type="text" placeholder="Email (*)" />-->
+<!--                </div>-->
+<!--                <textarea placeholder="Nội dung" rows="10"></textarea>-->
+<!--                <button class="btn-search mt-4">Gửi yêu cầu</button>-->
+<!--            </form>-->
         </div>
+        <div class="contact__location-img" style="background-image: url(<?php echo $image['url'] ?>);"></div>
     </div>
-</section>
+</div>

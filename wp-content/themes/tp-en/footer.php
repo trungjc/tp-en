@@ -2,111 +2,94 @@
 
 $facebook = get_field('facebook', 'option') ?: '';
 $youtube = get_field('youtube', 'option') ?: '';
-// $twitter = get_field('twitter', 'option') ?: '';
+$twitter = get_field('twitter', 'option') ?: '';
+$linkedin = get_field('linkedin', 'option') ?: '';
 $address = get_field('address', 'option') ?: '';
-$phone_1 = get_field('phone_1', 'option') ?: '';
-$phone_2 = get_field('phone_2', 'option') ?: '';
+$hotline = get_field('hotline', 'option') ?: '';
 $email = get_field('email', 'option') ?: '';
 $logoText = get_field('logo_text', 'option') ?: '';
 $logo_footer = get_field('logo_footer', 'option') ?: '';
+$company_name = get_field('company_name', 'option') ?: '';
 ?>
-<footer class="app-footer">
-	<div class="footer-inside">
-		<div class="container">
+<footer class="footer">
+    <div class="flex items-center text-2xl">
+        <div class="footer__logo"></div>
+        <span class="font-bold sm:text-xl"><?php echo $logoText ?></span>
+    </div>
+    <div class="footer__inner">
+        <div class="footer__left">
+            <p class="uppercase"><?php  if(pll_current_language() == 'en') {?>
+            Contact
+          <?php  } else {?>
+                    Liên hệ
+          <?php  } ?></p>
+            <p class="font-bold text-2xl mt-6 uppercase sm:text-xl">
+                <?php echo $company_name ?>
+            </p>
+            <div class="footer__location">
+                <strong class=""><?php  if(pll_current_language() == 'en') {?>
+                        Location:
+                  <?php  } else {?>
+                        Trụ sở chính:
+                  <?php  } ?></strong>
+                <p class="">
+                  <?php echo $address ?>
+                </p>
+            </div>
 
-			<div class="d-flex flex-wrap justify-content-between footer-middle">
-				<div class="col-footer first-col mb-5 mb-md-0">
-					<a class="mb-5 d-inline-block" href=" <?php echo home_url(); ?>">
-						<img src="<?php echo $logo_footer['sizes']['large']  ?>" class="logo-img" alt="<?php echo $logoText; ?>" />
-					</a>
-					<div class="site-info">
-						<div class="d-flex align-items-center mb-4 pb-2">
-							<i class="icon-map-marker"></i>
-							<div class="site-info-text">
-								<?php echo $address ?>
-							</div>
-						</div>
-						<div class="d-flex align-items-center mb-4 pb-2">
-							<i class="icon-Vector-4"></i>
-							<div class="site-info-text">
-								<?php echo $phone_1 ?>
-								<?php echo $phone_2 ?>
-							</div>
-						</div>
-						<div class="d-flex align-items-center mb-4 pb-2">
-							<i class="icon-Vector-5"></i>
-							<div class="site-info-text">
-								<?php echo $email ?>
-							</div>
-						</div>
-					</div>
-				</div>
-
-				<div class="col-footer me-4 second-col">
-					<?php if (pll_current_language() == 'en') {
-						echo '<h6>About us</h6>';
-					} else {
-						echo '<h6>về iccare</h6>';
-					} ?>
-					<?php
-					wp_nav_menu(array(
-						'theme_location' => 'footer_column_1',
-						'container' => false,
-						'menu_class' => 'nav flex-column ',
-						'walker' => new WP_Bootstrap_Navwalker()
-					));
-					?>
-				</div>
-				<div class="col-footer me-4 third-col">
-
-					<?php if (pll_current_language() == 'en') {
-						echo '<h6>Treatment diseases</h6>';
-					} else {
-						echo '<h6>BỆNH ĐIỀU TRỊ</h6>';
-					} ?>
-					<?php
-					wp_nav_menu(array(
-						'theme_location' => 'footer_column_2',
-						'container' => false,
-						'menu_class' => 'nav flex-column ',
-						'walker' => new WP_Bootstrap_Navwalker()
-					));
-					?>
-				</div>
-				<div class="col-footer me-4 last-col mt-4 mt-md-0">
-					<?php if (pll_current_language() == 'en') {
-						echo '<h6>treatment subject</h6>';
-					} else {
-						echo '<h6>ĐỐI tượng điều trị</h6>';
-					} ?>
-					<?php
-					wp_nav_menu(array(
-						'theme_location' => 'footer_column_3',
-						'container' => false,
-						'menu_class' => 'nav flex-column ',
-						'walker' => new WP_Bootstrap_Navwalker()
-					));
-					?>
-				</div>
-			</div>
-			<div class="copy-right py-5 d-flex align-items-center justify-content-between">
-				Copyright ⓒ iCCare &copy; <?php echo date("Y"); ?> All rights reserved.
-				<div class="social">
-					<?php if ($facebook) : ?>
-						<a class="ms-4" href="<?php echo $facebook ?>">
-							<i class="icon-Icon-Round-Facebook-Future-Blue"></i>
-						</a>
-					<?php endif ?>
-					<?php if ($youtube) : ?>
-						<a class="ms-4" href="<?php echo $youtube ?>">
-							<i class="icon-Subtract"></i>
-						</a>
-					<?php endif ?>
-
-				</div>
-			</div>
-		</div>
-	</div>
+            <p class="mt-6"><strong>Hotline</strong>: <?php echo $hotline ?></p>
+            <p class="mt-6"><strong>Email</strong>: <?php echo $email ?></p>
+        </div>
+        <div class="footer__right">
+            <div class="flex-1">
+                <p class=""><?php  if(pll_current_language() == 'en') {?>
+                        COMPANY
+                  <?php  } else {?>
+                        CÔNG TY
+                  <?php  } ?></p>
+                <nav>
+                  <?php
+                  wp_nav_menu(array(
+                    'theme_location' => 'bottom',
+                    'container' => false,
+                    'menu_class' => 'nav nav-pills ',
+                    'walker' => new WP_Bootstrap_Navwalker()
+                  ));
+                  ?>
+                </nav>
+            </div>
+            <div class="flex-1">
+                <p class=""><?php  if(pll_current_language() == 'en') {?>
+                        SOCIAL
+                  <?php  } else {?>
+                        LIÊN KẾT
+                  <?php  } ?></p>
+                <div class="flex mt-3">
+                    <a target="_blank" href="<?php echo $facebook ?>">
+                        <img
+                                src="<?php echo get_template_directory_uri(); ?>/assets/images/facebook.svg"
+                                alt=""
+                                width="36"
+                                height="36"
+                                class="mr-4 sm:mr-5"
+                        />
+                    </a>
+                    <a target="_blank" href="<?php echo $youtube ?>">
+                        <img
+                                src="<?php echo get_template_directory_uri(); ?>/assets/images/youtube.svg"
+                                alt=""
+                                width="36"
+                                height="36"
+                                class="mr-4 sm:mr-5"
+                        />
+                    </a>
+                    <a target="_blank" href="<?php echo $linkedin ?>">
+                        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/linkedin.svg" alt="" width="36" height="36"/>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
 </footer>
 <?php wp_footer(); ?>
 </body>
