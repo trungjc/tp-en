@@ -21,13 +21,13 @@
 
 // ** MySQL settings - You can get this info from your web host ** //
 /** The name of the database for WordPress */
-define('DB_NAME', 'app-tp-en');
+define('DB_NAME', 'dbwebtpcomvn');
 
 /** MySQL database username */
-define('DB_USER', 'root');
+define('DB_USER', 'websitedb');
 
 /** MySQL database password */
-define('DB_PASSWORD', 'root');
+define('DB_PASSWORD', 'TPcom@5786x');
 
 /** MySQL hostname */
 define('DB_HOST', 'localhost');
@@ -79,6 +79,9 @@ define('ALLOW_UNFILTERED_UPLOADS', true);
  * @link https://wordpress.org/support/article/debugging-in-wordpress/
  */
 define('WP_DEBUG', true);
+
+define( 'WP_HOME', 'https://web.tp.com.vn/' );
+define( 'WP_SITEURL', 'https://web.tp.com.vn/' );
 
 /* That's all, stop editing! Happy publishing. */
 
