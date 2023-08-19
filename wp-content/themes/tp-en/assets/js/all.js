@@ -7,14 +7,20 @@ $(document).ready(function () {
     $(".header").toggleClass("header--in-overlay");
   });
 
+  $(".nav-menu li a").click(function () {
+    $(".nav-menu").toggleClass("open");
+  });
+
   initMainPage();
   initJobDetailPage();
   initRecruitmentPage();
   initNewsDetailPage();
+  initContactPage();
+
 
   $(document).on("scroll", () => {
-    if ($("main#page-job-detail").length) return;
-    if ($("#page-news-detail").length) return;
+    // if ($("main#page-job-detail").length) return;
+    // if ($("#page-news-detail").length) return;
     // if ($("body").hasClass("recruitment")) {
     if ($(window).scrollTop() > 10) {
       $(".header").removeClass("header--transparent");
@@ -24,6 +30,12 @@ $(document).ready(function () {
     // }
   });
 });
+
+const initContactPage = () => {
+  if (!isMobile()) {
+    $(".contact__location-img").height($(".contact__container").height());
+  }
+}
 
 const initNewsDetailPage = () => {
   if ($("#page-news-detail").length === 0) return;

@@ -73,7 +73,17 @@
           ));
           ?>
         </nav>
-        <div></div>
+        <div class="header__language-sp">
+            <ul>
+              <?php
+              pll_the_languages(array(
+                'dropdown' => 0,
+                'show_flags' => 0,
+                'show_names' => 1,
+                'raw' => 0,
+              )) ?>
+            </ul>
+        </div>
     </div>
 
 

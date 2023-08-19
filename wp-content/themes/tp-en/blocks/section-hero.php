@@ -21,7 +21,7 @@ $banner_items = get_sub_field('banner_items');
         <img src="<?php echo get_template_directory_uri(); ?>/assets/images/scroll-down.svg" alt=""/>
     </div>
 
-    <div class="intro">
+    <div class="intro" id="about-us">
         <div
                 data-aos="fade-up"
                 data-aos-duration="500"

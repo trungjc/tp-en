@@ -9,7 +9,7 @@ $shortCode = get_sub_field('short_code');
 $image = get_sub_field('image');
 ?>
 
-<div class="container mx-auto contact__container" style="background-image: url(<?php echo $image['url'] ?>);">
+<div class="contact__container">
     <div class="contact__inner">
         <div class="contact__form">
             <p class="contact__form-sub"><?php echo $subTitle ?></p>
@@ -31,6 +31,7 @@ $image = get_sub_field('image');
 <!--                <button class="btn-search mt-4">Gửi yêu cầu</button>-->
 <!--            </form>-->
         </div>
-        <div class="contact__location-img" style="background-image: url(<?php echo $image['url'] ?>);"></div>
+        <div class="contact__location-img" style="background: radial-gradient(50% 50.00% at 50% 50.00%, rgba(250, 251, 252, 0.00) 44.27%, #FAFBFC 100%), url('<?php echo $image['url'] ?>') no-repeat"></div>
+<!--        <div class="contact__location-img"></div>-->
     </div>
 </div>

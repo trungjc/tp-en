@@ -10,24 +10,26 @@ $email = get_field('email', 'option') ?: '';
 $logoText = get_field('logo_text', 'option') ?: '';
 $logo_footer = get_field('logo_footer', 'option') ?: '';
 $company_name = get_field('company_name', 'option') ?: '';
+$logoWhite = get_field('logo_white', 'option') ?: '';
+if($logoWhite ) {
+  $logoImageWhite = $logoWhite['url'];
+}
 ?>
 <footer class="footer">
     <div class="flex items-center text-2xl">
-        <a href="<?php echo home_url(); ?>" class="footer__logo">
-            
-        </a>
+        <a href="<?php echo home_url(); ?>" class="footer__logo" style="background-image: url(<?php echo $logoImageWhite ?>);"></a>
 
         <span class="font-bold sm:text-xl"><?php echo $logoText ?></span>
     </div>
     <div class="footer__inner">
         <div class="footer__left">
             <p class="uppercase"><?php  if(pll_current_language() == 'en') {?>
-            Contact
-          <?php  } else {?>
+                    Contact
+              <?php  } else {?>
                     Liên hệ
-          <?php  } ?></p>
+              <?php  } ?></p>
             <p class="font-bold text-2xl mt-6 uppercase sm:text-xl">
-                <?php echo $company_name ?>
+              <?php echo $company_name ?>
             </p>
             <div class="footer__location">
                 <strong class=""><?php  if(pll_current_language() == 'en') {?>
