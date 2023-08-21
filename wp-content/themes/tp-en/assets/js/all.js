@@ -22,11 +22,25 @@ $(document).ready(function () {
     // if ($("main#page-job-detail").length) return;
     // if ($("#page-news-detail").length) return;
     // if ($("body").hasClass("recruitment")) {
+
+    if ($("main#page-job-detail").length) {
+      if (!isMobile()) {
+        if ($(window).scrollTop() > 10) {
+          $(".header").addClass("hidden");
+        } else {
+          $(".header").removeClass("hidden");
+        }
+      }
+
+    }
     if ($(window).scrollTop() > 10) {
       $(".header").removeClass("header--transparent");
     } else {
       $(".header").addClass("header--transparent");
     }
+
+
+
     // }
   });
 });
@@ -114,10 +128,10 @@ const paralaxImage = () => {
   });
 
   function callParallax(e) {
-    parallaxIt(e, ".life__img-1", -100);
-    parallaxIt(e, ".life__img-2", -70);
-    parallaxIt(e, ".life__img-3", -50);
-    parallaxIt(e, ".life__img-4", -30);
+    parallaxIt(e, ".life__img-1", -50);
+    parallaxIt(e, ".life__img-2", -35);
+    parallaxIt(e, ".life__img-3", -25);
+    parallaxIt(e, ".life__img-4", -15);
   }
 
   function parallaxIt(e, target, movement) {
@@ -273,7 +287,9 @@ const initMainPage = () => {
     });
   } else {
     initDevelopmentSlider();
-    paralaxImage();
+    setTimeout(() => {
+      paralaxImage();
+    }, 2000)
   }
 };
 
