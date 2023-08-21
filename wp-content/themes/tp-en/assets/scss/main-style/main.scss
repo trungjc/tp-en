@@ -3000,7 +3000,7 @@ section {
     display: block;
     position: static;
     width: 100%;
-    background-position: left 53% top 50% !important;
+    background-position: left 53% top 55px !important;
     background-size: cover !important;
     height: 60vh;
   }
@@ -3259,6 +3259,24 @@ body:has(#page-job-detail) {
       }
     }
   }
+
+  //.main {
+  //  background: #fff;
+  //  z-index: 1;
+  //  position: relative;
+  //  margin-bottom: 500px;
+  //
+  //  .job-detail__content {
+  //
+  //  }
+  //}
+  //
+  //footer {
+  //  position: fixed;
+  //  left: 0;
+  //  bottom: 0;
+  //  z-index: 0;
+  //}
 }
 
 body:has(#page-tin-tuc) {

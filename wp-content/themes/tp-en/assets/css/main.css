@@ -2652,7 +2652,7 @@ section {
     display: block;
     position: static;
     width: 100%;
-    background-position: left 53% top 50% !important;
+    background-position: left 53% top 55px !important;
     background-size: cover !important;
     height: 60vh;
   }
