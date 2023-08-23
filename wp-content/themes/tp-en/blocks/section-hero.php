@@ -2,6 +2,7 @@
 $logo_image = get_sub_field('mobile_image');
 $video_mp4_url = get_sub_field('video_mp4_url');
 $mobile_image = get_sub_field('mobile_image');
+$pc_image = get_sub_field('pc_image');
 $banner_sub_title = get_sub_field('banner_sub_title');
 $banner_title = get_sub_field('banner_title');
 $banner_items = get_sub_field('banner_items');
@@ -11,11 +12,15 @@ $banner_items = get_sub_field('banner_items');
 <div class="banner-wrapper">
 
     <div class="main-banner">
-        <div class="main-banner__img" style="background-image: url('<?php echo $mobile_image['url'] ?>'); display: <?php echo $video_mp4_url ? 'none' : 'block' ?>"></div>
+        <div class="main-banner__img sp" style="background-image: url('<?php echo $mobile_image['url'] ?>'); display: <?php echo $video_mp4_url ? 'none' : 'block' ?>"></div>
       <?php if ( $video_mp4_url ) : ?>
           <video autoplay muted loop>
               <source src="<?php echo $video_mp4_url ?>" type="video/mp4"/>
           </video>
+      <?php endif; ?>
+
+      <?php if ( !$video_mp4_url ) : ?>
+          <div class="main-banner__img pc" style="background-image: url('<?php echo $pc_image['url'] ?>'); display: <?php echo $video_mp4_url ? 'none' : 'block' ?>"></div>
       <?php endif; ?>
 
         <img src="<?php echo get_template_directory_uri(); ?>/assets/images/scroll-down.svg" alt=""/>

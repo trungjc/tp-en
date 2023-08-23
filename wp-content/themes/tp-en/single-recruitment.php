@@ -69,8 +69,8 @@ if (have_posts()) :
                             </div>
                         </div>
                     </div>
-
                     <div class="btn-secondary" id="open-send-cv-form"><?php echo $btnText ?></div>
+
                 </div>
                 <div class="job-detail__content">
                   <?php echo $jobDetail ?>

@@ -8,9 +8,9 @@ $reason = get_sub_field('reason');
           <div class="reason__content">
               <p class="reason__sub-title"><?php echo $value['sub_title'] ?></p>
               <p class="reason__title"><?php echo $value['title'] ?></p>
-              <p class="reason__text">
+              <div class="reason__text">
                 <?php echo $value['text'] ?>
-              </p>
+              </div>
           </div>
           <div class="reason__image">
               <img data-aos="fade-up" src="<?php echo $value['image1']['url'] ?>" alt="" />

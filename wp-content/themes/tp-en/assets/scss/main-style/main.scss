@@ -761,6 +761,11 @@ object {
   width: 3.6rem;
   height: 3.6rem;
   cursor: pointer;
+
+  @media (max-width: 768px) {
+    width: 2.4rem;
+    height: 2.4rem;
+  }
 }
 
 .modal__background {
@@ -899,6 +904,10 @@ section {
   align-items: center;
   width: 100%;
   margin: auto;
+
+  @media (min-width: 768px) {
+    min-height: auto;
+  }
 }
 
 .intro__vision {
@@ -1137,7 +1146,7 @@ section {
   font-weight: 400;
   position: absolute;
   left: 0;
-  top: 10rem;
+  top: 13rem;
   z-index: 1;
   display: flex;
 
@@ -1495,6 +1504,9 @@ section {
 
 .reason__text {
   margin-top: 3rem;
+  p {
+    margin-bottom: 2rem;
+  }
 }
 
 .search {
@@ -1808,6 +1820,15 @@ section {
 
   textarea {
     width: 100%;
+    margin-bottom: 2rem;
+  }
+
+  .btn-search {
+    margin-top: 0;
+
+    @media (max-width: 768px) {
+      margin-bottom: 0;
+    }
   }
 
   h3 {
@@ -1923,6 +1944,9 @@ section {
   }
 
   p {
+    a {
+      text-transform: uppercase;
+    }
     &:nth-child(1) {
       color: $color_18;
       font-size: 2rem;
@@ -2003,6 +2027,7 @@ section {
   }  @media (max-width: 768px) {
     padding-left: 2rem;
   padding-right: 2rem;
+  padding-top: 2rem;
 
   }
 
@@ -2069,6 +2094,20 @@ section {
   }
 }
 
+.sp {
+  display: none!important;
+  @media (max-width: 768px) {
+    display: block!important;
+  }
+}
+
+.pc {
+  display: block!important;
+  @media (max-width: 768px) {
+    display: none!important;
+  }
+}
+
 .main-banner__img {
   display: none;
   background-image: url(../images/banner.png);
@@ -2130,6 +2169,7 @@ section {
   position: relative;
   @media (max-width: 768px) {
     overflow-x: hidden;
+    height: calc(100vh);
   }
 }
 
@@ -2141,6 +2181,8 @@ section {
   min-width: 80vw;
 
   @media (max-width: 768px) {
+    height: calc(100% - 80px);
+
     &:last-child {
       max-width: 100vw;
       min-width: 100vw;
@@ -2154,7 +2196,7 @@ section {
   flex-direction: column;
   justify-content: space-between;
   height: 100%;
-  padding-top: 20rem;
+  padding-top: 23rem;
 }
 
 .development-path__arrows {
@@ -2373,9 +2415,15 @@ section {
 
 .sponsor__list {
   display: flex;
-  gap: 8rem;
+  gap: 0rem 6rem;
   flex-wrap: wrap;
   justify-content: center;
+  align-items: center;
+
+  img {
+    width: 200px;
+    height: fit-content;
+  }
 }
 
 @media (max-width: 1536px) {
@@ -2557,7 +2605,7 @@ section {
     margin-top: 48px;
   }
   .header {
-    padding-top: 2rem;
+    padding-top: 0;
 
     .header__language {
       display: none;
@@ -2743,7 +2791,7 @@ section {
   }
   .nav-menu {
     display: block;
-    background: #031833 url(../images/stronger-together.svg) no-repeat right 50% bottom 30%;
+    background: #031833 url(../images/stronger-together.svg) no-repeat right 50% bottom 15%;
     background-size: 110%;
 
     nav {
@@ -2921,10 +2969,14 @@ section {
       border-color: $border-color_3;
       color: $color_4;
       padding: 1.6rem 4rem;
+
+      @media (max-width: 768px) {
+        transition: unset;
+      }
     }
 
     h1 {
-      margin-top: 1rem;
+      margin-top: 2rem;
       font-size: 26px;
     }
   }
@@ -2941,7 +2993,7 @@ section {
     }
 
     h2 {
-      font-size: 1.6rem;
+      font-size: 2.6rem;
     }
   }
   .recruitment-form__img {
@@ -3107,7 +3159,7 @@ section {
     transform: rotate(-90deg);
     position: absolute;
     left: -150px;
-    bottom: 160px;
+    bottom: 100px;
     font-size: 200px;
     margin-left: 2rem;
   }
@@ -3203,7 +3255,7 @@ section {
     font-size: 24px;
   }
   .sponsor__list {
-    gap: 3rem;
+    gap: 0 3rem;
     justify-content: center;
     flex-wrap: wrap;
 
@@ -3319,6 +3371,23 @@ body:has(#page-tin-tuc) {
         color: #131313;
       }
     }
+  }
+}
+
+
+body:has(#page-recruitment) {
+  header {
+    @media (max-width: 768px) {
+      .header__left {
+        .logo-black {
+          display: block;
+        }
+        .logo-white {
+          display: none;
+        }
+      }
+    }
+
   }
 }
 

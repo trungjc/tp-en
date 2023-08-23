@@ -52,7 +52,7 @@ $category_id = get_queried_object()->term_id;
                           <?php the_post_thumbnail('large') ?>
                         </a>
                         <div class="event-list__card-content">
-                            <p><?php $post_tags = get_the_tags();
+                            <p style="margin-bottom: 1rem"><?php $post_tags = get_the_tags();
                               if ($post_tags) {
                                 foreach ($post_tags as $tag) {
                                   echo '<a style="margin-right: 1rem;" href="' . get_tag_link($tag->term_id) . '">' . $tag->name . '</a>';

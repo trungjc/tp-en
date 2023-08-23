@@ -237,6 +237,11 @@ const initJobDetailPage = () => {
   if (isMobile()) {
     setTimeout(() => {
       setContentPadding();
+      if (distance() - 30 > 0) {
+        $("#open-send-cv-form").css("bottom", distance() - 30 + "px");
+      } else {
+        $("#open-send-cv-form").css("bottom", '2.8rem');
+      }
     }, 500);
   }
 
@@ -248,6 +253,12 @@ const initJobDetailPage = () => {
         $(".job-detail__title").css("top", 0);
       }
     } else {
+      console.log(distance());
+      if (distance() - 30 > 0) {
+        $("#open-send-cv-form").css("bottom", distance() - 30 + "px");
+      } else {
+        $("#open-send-cv-form").css("bottom", '2.8rem');
+      }
       if (window.scrollY > 10) {
         $(".job-detail").addClass("simple");
       } else {
