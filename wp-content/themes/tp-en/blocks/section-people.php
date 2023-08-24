@@ -6,7 +6,7 @@ $images = get_sub_field('images');
 $link = get_sub_field('link');
 ?>
 
-<section class="container life">
+<section class="container life container-xl">
     <div class="life__left">
         <div class="life-pc">
             <p class="life__sub-title"><?php echo $subTitle ?></p>

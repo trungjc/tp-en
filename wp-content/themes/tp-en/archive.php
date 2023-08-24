@@ -7,7 +7,7 @@ $category_id = get_queried_object()->term_id;
 ?>
 
 <main class="main" id="page-tin-tuc">
-    <div class="container mx-auto">
+    <div class="container mx-auto" style="max-width: 1300px">
       <?php
       if (have_posts()) { ?>
 

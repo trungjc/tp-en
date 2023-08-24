@@ -12,11 +12,13 @@ $link = get_sub_field('link');
         <div class="banner__text">
             <p><?php echo $subTitle ?></p>
             <p><?php echo $title ?></p>
-            <p class="banner__jobs">
-              <?php foreach ($jobs as $key => $value): ?>
-                  <span class="<?php if ($key === 0) echo 'active' ?>"><?php echo $value['job'] ?></span>
-              <?php endforeach; ?>
-            </p>
+            <div class="banner__jobs swiper">
+              <div class="swiper-wrapper">
+                <?php foreach ($jobs as $key => $value): ?>
+                    <span class="swiper-slide <?php if ($key === 0) echo 'active' ?>"><?php echo $value['job'] ?></span>
+                <?php endforeach; ?>
+              </div>
+            </div>
             <a class="btn-primary" href="#recruitment-list">
                 <span><?php echo $link ? $link['title'] : "" ?></span>
             </a>

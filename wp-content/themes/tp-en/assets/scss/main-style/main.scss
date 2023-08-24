@@ -742,6 +742,7 @@ object {
   border-radius: 26px;
   background: #3A93FD;
   padding: 8px 1.6rem;
+  cursor: pointer;
 }
 
 .modal {
@@ -1419,19 +1420,27 @@ section {
   font-weight: 800;
   color: $color_12;
   margin-bottom: 2rem;
-
+  height: 6.4rem;
+  @media (max-width: 768px) {
+    height: 34px;
+  }
   span {
-    opacity: 0;
-    visibility: hidden;
+    ;
+    //opacity: 0;
+    //visibility: hidden;
     transition: all .5s;
-    height: 0;
+    //height: 0;
     display: block;
+
+    @media (max-width: 768px) {
+      font-size: 24px;
+    }
   }
 
   span.active {
-    opacity: 1;
-    visibility: visible;
-    height: auto;
+    //opacity: 1;
+    //visibility: visible;
+    //height: auto;
   }
 }
 
@@ -1984,7 +1993,7 @@ section {
 }
 
 .event-detail-content {
-  max-width: 92rem;
+  max-width: 100rem;
   font-size: 1.8rem;
 
   img {
@@ -2175,7 +2184,7 @@ section {
 }
 
 .development-path__panel {
-  height: calc(100% - 80px);
+  //height: calc(100% - 80px);
   color: $color_4;
   position: relative;
   max-width: 80vw;
@@ -2228,6 +2237,12 @@ section {
   @media (max-width: 1024px) {
     font-size: 30rem;
   }
+}
+
+.container-xl {
+  max-width: 1300px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .quality {
@@ -2394,12 +2409,13 @@ section {
 
   br {
     content: "";
-    height: 4rem;
+    height: 2rem;
     display: block;
   }
 }
 
 .sponsor {
+
   text-align: center;
 }
 
@@ -2953,7 +2969,7 @@ section {
     width: 100%;
     border-radius: 0 0 2rem 2rem;
     height: auto;
-    padding-top: 14rem;
+    padding-top: 10rem;
     padding-bottom: 2rem;
 
     img {
@@ -3392,17 +3408,29 @@ body:has(#page-recruitment) {
   }
 }
 
-//body:has(#page-news-detail) {
-//  header {
-//    .menu {
-//      span {
-//        @media (max-width: 768px) {
-//          background: #fff;
-//        }
-//      }
-//    }
-//  }
-//}
+body:has(.banner-wrapper) {
+  .header--transparent {
+    .header__language {
+      //display: block;
+      li {
+        color: rgba(255, 255, 255, 0.30);
+      }
+
+      li.current-lang {
+        color: #fff;
+      }
+    }
+  }
+  .wrapper:has(.header--transparent) {
+    .menu {
+      span {
+        background: #fff;
+      }
+    }
+  }
+
+
+}
 
 body:has(#page-contact) {
   header {
@@ -3423,4 +3451,6 @@ body:has(#page-contact) {
     margin-top: 0;
   }
 }
-
+.main {
+  //max-width: 1300px;
+}

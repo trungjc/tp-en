@@ -6,7 +6,7 @@ $categories = get_the_category($post->ID);
 $category_id = $categories[0]->cat_ID;
 
 ?>
-    <div class="container mx-auto">
+    <div class="container mx-auto" style="max-width: 1300px">
         <div class="event-detail-head">
             <p class="event-detail-head__sub"><?php $post_tags = get_the_tags();
               if ($post_tags) {

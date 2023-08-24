@@ -681,6 +681,7 @@ object {
   border-radius: 26px;
   background: #3A93FD;
   padding: 8px 1.6rem;
+  cursor: pointer;
 }
 
 .modal {
@@ -1255,20 +1256,22 @@ section {
   font-weight: 800;
   color: #3a93fd;
   margin-bottom: 2rem;
+  height: 6.4rem;
+}
+@media (max-width: 768px) {
+  .banner__jobs {
+    height: 34px;
+  }
 }
 .banner__jobs span {
-  opacity: 0;
-  visibility: hidden;
   transition: all 0.5s;
-  height: 0;
   display: block;
 }
-.banner__jobs span.active {
-  opacity: 1;
-  visibility: visible;
-  height: auto;
+@media (max-width: 768px) {
+  .banner__jobs span {
+    font-size: 24px;
+  }
 }
-
 .banner__text p:first-child {
   font-size: 2rem;
   color: rgba(255, 255, 255, 0.7019607843);
@@ -1759,7 +1762,7 @@ section {
 }
 
 .event-detail-content {
-  max-width: 92rem;
+  max-width: 100rem;
   font-size: 1.8rem;
 }
 .event-detail-content img {
@@ -1950,7 +1953,6 @@ section {
 }
 
 .development-path__panel {
-  height: calc(100% - 80px);
   color: #fff;
   position: relative;
   max-width: 80vw;
@@ -2005,6 +2007,12 @@ section {
   .development-path__year {
     font-size: 30rem;
   }
+}
+
+.container-xl {
+  max-width: 1300px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .quality {
@@ -2172,7 +2180,7 @@ section {
 }
 .life__text br {
   content: "";
-  height: 4rem;
+  height: 2rem;
   display: block;
 }
 
@@ -2624,7 +2632,7 @@ section {
     width: 100%;
     border-radius: 0 0 2rem 2rem;
     height: auto;
-    padding-top: 14rem;
+    padding-top: 10rem;
     padding-bottom: 2rem;
   }
   .job-detail__title img {
@@ -3084,6 +3092,16 @@ body:has(#page-tin-tuc) header .header__left span {
   body:has(#page-recruitment) header .header__left .logo-white {
     display: none;
   }
+}
+
+body:has(.banner-wrapper) .header--transparent .header__language li {
+  color: rgba(255, 255, 255, 0.3);
+}
+body:has(.banner-wrapper) .header--transparent .header__language li.current-lang {
+  color: #fff;
+}
+body:has(.banner-wrapper) .wrapper:has(.header--transparent) .menu span {
+  background: #fff;
 }
 
 body:has(#page-contact) header .header__left .logo-black {

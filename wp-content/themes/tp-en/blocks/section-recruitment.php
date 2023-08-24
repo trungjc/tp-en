@@ -13,7 +13,7 @@ $departmentOptions = array_values(array_unique(array_map(function ($v) {
     var jobList = <?php echo json_encode($recruitment)?>;
 </script>
 
-<div class="container" id="recruitment-list">
+<div class="container container-xl" id="recruitment-list">
     <!--search-->
     <section class="search">
         <p class="search__sub-title"><?php echo $subTitle?></p>

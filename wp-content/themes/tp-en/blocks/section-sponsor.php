@@ -4,7 +4,7 @@ $subTitle = get_sub_field('sub_title');
 $images = get_sub_field('images');
 ?>
 
-<section class="sponsor">
+<section class="sponsor container-xl">
     <div class="container">
         <p class="sponsor__sub-title"><?php echo $subTitle ?></p>
         <p class="sponsor__title">

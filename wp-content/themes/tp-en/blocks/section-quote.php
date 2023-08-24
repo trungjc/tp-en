@@ -2,7 +2,7 @@
 $item = get_sub_field('item');
 ?>
 
-<section class="container">
+<section class="container container-xl">
     <!-- Slider main container -->
     <div class="quote">
         <div class="quote-swiper swiper">

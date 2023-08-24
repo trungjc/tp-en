@@ -2,7 +2,7 @@
 $reason = get_sub_field('reason');
 ?>
 
-<section class="container">
+<section class="container container-xl">
   <?php foreach ($reason as $key => $value): ?>
       <div class="reason <?php if ($key % 2 != 0) echo 'reason--reverse' ?>">
           <div class="reason__content">

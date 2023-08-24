@@ -6,7 +6,7 @@ $card = get_sub_field('card');
 ?>
 
 
-<section class="container quality swiper">
+<section class="container quality swiper container-xl">
   <p class="quality__sub-title"><?php echo $title ?></p>
   <p class="quality__title"><?php echo $description ?></p>
   <div class="quality__content swiper-wrapper">

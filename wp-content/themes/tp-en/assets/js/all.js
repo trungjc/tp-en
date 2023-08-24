@@ -151,14 +151,23 @@ const paralaxImage = () => {
 const initRecruitmentPage = () => {
   if ($("main#page-recruitment").length === 0) return;
 
-  const $jobs = $(".banner__jobs span");
-  let jobCount = 0;
-  const jobInterval = setInterval(() => {
-    if (jobCount === $jobs.length) return clearInterval(jobInterval);
-    $jobs.removeClass("active");
-    jobCount++;
-    $(`.banner__jobs span:nth-child(${jobCount})`).addClass("active");
-  }, 2000);
+  new Swiper(".banner__jobs", {
+    direction: "vertical",
+    // loop: true,
+    autoplay: {
+        delay: 2000,
+        disableOnInteraction: false,
+      stopOnLastSlide: true
+    }
+  });
+  // const $jobs = $(".banner__jobs span");
+  // let jobCount = 0;
+  // const jobInterval = setInterval(() => {
+  //   if (jobCount === $jobs.length) return clearInterval(jobInterval);
+  //   $jobs.removeClass("active");
+  //   jobCount++;
+  //   $(`.banner__jobs span:nth-child(${jobCount})`).addClass("active");
+  // }, 2000);
 
   const swiper = new Swiper(".quote-swiper", {
     loop: true,
@@ -176,7 +185,7 @@ const initRecruitmentPage = () => {
   });
 
   // hande search job
-  $(".search .btn-search").on('click', () => {
+  const search = () => {
     const textValue = $(".search__job").val() || '';
     const selectValue = $(".search__department").val() || '';
     jobList.forEach(job => {
@@ -188,8 +197,21 @@ const initRecruitmentPage = () => {
         $(`#job__card-${job.ID}`).hide();
       }
     })
+  }
+  $(".search .btn-search").on('click', () => {
+    search()
   });
 
+  console.log(jobList);
+  jobList.forEach(job => {
+    const elm = $(`#job__card-${job.ID} .tag-blue`);
+    elm.on('click', () => {
+      console.log($(`#job__card-${job.ID} .tag-blue`).text());
+      console.log(12);
+      $(".search__department").val($(`#job__card-${job.ID} .tag-blue`).text());
+      search()
+    })
+  })
   //
   $('.banner__text .btn-primary').on('click',function(e){
     e.preventDefault();
