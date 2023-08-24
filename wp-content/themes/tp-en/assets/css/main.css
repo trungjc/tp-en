@@ -1285,8 +1285,8 @@ section {
 .reason {
   display: flex;
   align-items: center;
-  height: 46vw;
   gap: 7rem;
+  margin-bottom: 4rem;
 }
 
 .reason--reverse {
@@ -1301,7 +1301,7 @@ section {
 .reason__image {
   position: relative;
   height: 40vw;
-  max-height: 520px;
+  max-height: 550px;
   flex: 1;
   width: 100%;
 }
