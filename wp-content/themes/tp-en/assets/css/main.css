@@ -1201,11 +1201,14 @@ section {
   padding: 1rem 2rem;
   text-transform: uppercase;
   width: fit-content;
+  background: linear-gradient(to left, transparent 50%, #fff 50%) right;
+  background-size: 202%;
+  transition: 0.5s ease-out;
 }
 .nav-menu ul li a:hover {
   color: #031833;
-  background: #fff;
-  transition: all 0.25s;
+  background-position: left;
+  transition: all 0.25s ease;
 }
 .nav-menu ul li a:hover:after {
   width: 100%;
@@ -1244,6 +1247,15 @@ section {
   margin-top: 0;
   filter: brightness(0.85);
 }
+.banner__overlay {
+  width: 50%;
+  z-index: -1;
+  position: absolute;
+  left: 0;
+  height: 100%;
+  top: 0;
+  background: linear-gradient(90deg, #000 -23%, rgba(0, 0, 0, 0) 100%);
+}
 
 .banner__content {
   display: flex;
@@ -1281,6 +1293,7 @@ section {
 .banner__text p:first-child {
   font-size: 2rem;
   color: rgba(255, 255, 255, 0.7019607843);
+  letter-spacing: 4px;
 }
 .banner__text p:nth-child(2) {
   font-size: 6.4rem;
@@ -1335,7 +1348,7 @@ section {
 .reason__sub-title {
   color: rgba(19, 19, 19, 0.7019607843);
   font-size: 2rem;
-  letter-spacing: 1px;
+  letter-spacing: 4px;
 }
 
 .reason__text {
@@ -1369,7 +1382,7 @@ section {
 .search__sub-title {
   color: rgba(19, 19, 19, 0.7019607843);
   font-size: 2rem;
-  letter-spacing: 1px;
+  letter-spacing: 4px;
 }
 
 .search__job {
@@ -1660,6 +1673,7 @@ section {
 .event-head__date {
   color: rgba(19, 19, 19, 0.5019607843);
   font-size: 2rem;
+  margin-top: 1rem;
 }
 
 .event-head__info {
@@ -1674,6 +1688,7 @@ section {
   font-size: 2rem;
   margin-bottom: 1.6rem;
   text-transform: uppercase;
+  letter-spacing: 4px;
 }
 .event-head__info-title a {
   color: #fff;
@@ -1681,6 +1696,8 @@ section {
   font-weight: 700;
   margin-bottom: 1.6rem;
   cursor: pointer;
+  letter-spacing: 1px;
+  text-transform: unset;
 }
 .event-head__info-date {
   color: rgba(255, 255, 255, 0.8);
@@ -1691,6 +1708,7 @@ section {
   text-transform: uppercase;
   color: rgba(19, 19, 19, 0.7019607843);
   font-size: 2rem;
+  letter-spacing: 4px;
 }
 
 .event-list {
@@ -1766,11 +1784,14 @@ section {
   color: rgba(19, 19, 19, 0.7019607843);
   font-size: 2rem;
   text-transform: uppercase;
+  letter-spacing: 4px;
+  margin-bottom: 1rem;
 }
 
 .event-detail-content {
   max-width: 100rem;
   font-size: 1.8rem;
+  line-height: 4rem;
 }
 .event-detail-content img {
   max-width: calc(100% + 20rem);
@@ -1792,7 +1813,7 @@ section {
 
 .contact__location-img {
   display: block;
-  width: 70%;
+  width: 67%;
   height: 100%;
   background-size: cover !important;
   position: absolute;
@@ -2030,6 +2051,7 @@ section {
   font-size: 2rem;
   color: rgba(19, 19, 19, 0.7);
   margin-bottom: 1rem;
+  letter-spacing: 4px;
 }
 
 .quality__title {
@@ -2173,6 +2195,7 @@ section {
 .life__sub-title {
   color: rgba(19, 19, 19, 0.7019607843);
   font-size: 2rem;
+  letter-spacing: 4px;
 }
 
 .life__title {
@@ -2199,6 +2222,7 @@ section {
 .sponsor__sub-title {
   color: rgba(19, 19, 19, 0.7019607843);
   font-size: 2rem;
+  letter-spacing: 4px;
 }
 
 .sponsor__title {
@@ -2546,6 +2570,7 @@ section {
   }
   .reason__title {
     text-align: center;
+    font-size: 24px;
   }
   .reason__sub-title {
     text-align: center;
@@ -3100,6 +3125,13 @@ body:has(#page-tin-tuc) header .header__left span {
   body:has(#page-recruitment) header .header__left .logo-white {
     display: none;
   }
+}
+
+body:has(#page-news-detail) header .header__left .logo-black {
+  display: block;
+}
+body:has(#page-news-detail) header .header__left .logo-white {
+  display: none;
 }
 
 body:has(.banner-wrapper) .header--transparent .header__language li {

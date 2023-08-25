@@ -11,7 +11,7 @@ $category_id = $categories[0]->cat_ID;
             <p class="event-detail-head__sub"><?php $post_tags = get_the_tags();
               if ($post_tags) {
                 foreach ($post_tags as $tag) {
-                  echo '<a style="margin-right: 1rem" href="' . get_tag_link($tag->term_id) . '">' . $tag->name . '</a>';
+                  echo '<a style="margin-right: 2rem" href="' . get_tag_link($tag->term_id) . '">' . $tag->name . '</a>';
                 }
               } ?></p>
             <h1><?php echo the_title() ?></h1>

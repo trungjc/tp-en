@@ -8,6 +8,7 @@ $link = get_sub_field('link');
 
 
 <section class="banner" style="background-image: url('<?php echo $image['url'] ?>')">
+    <div class="banner__overlay"></div>
     <div class="banner__content">
         <div class="banner__text">
             <p><?php echo $subTitle ?></p>

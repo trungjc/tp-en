@@ -31,7 +31,7 @@ $category_id = get_queried_object()->term_id;
                       <?php $post_tags = get_the_tags();
                       if ($post_tags) {
                         foreach ($post_tags as $tag) {
-                          echo '<a style="margin-right: 1rem" href="' . get_tag_link($tag->term_id) . '">' . $tag->name . '</a>';
+                          echo '<a style="margin-right: 2rem" href="' . get_tag_link($tag->term_id) . '">' . $tag->name . '</a>';
                         }
                       } ?>
                         <p class="event-head__info-title"><a  href="<?php the_permalink(); ?>"><?php the_title() ?></a></p>
@@ -55,7 +55,7 @@ $category_id = get_queried_object()->term_id;
                             <p style="margin-bottom: 1rem"><?php $post_tags = get_the_tags();
                               if ($post_tags) {
                                 foreach ($post_tags as $tag) {
-                                  echo '<a style="margin-right: 1rem;" href="' . get_tag_link($tag->term_id) . '">' . $tag->name . '</a>';
+                                  echo '<a style="margin-right: 2rem;" href="' . get_tag_link($tag->term_id) . '">' . $tag->name . '</a>';
                                 }
                               } ?></p>
                             <h3>
