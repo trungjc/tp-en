@@ -587,6 +587,7 @@ object {
   white-space: nowrap;
   padding: 1.6rem 4rem;
   cursor: pointer;
+  font-weight: 700;
 }
 .btn-search:hover {
   color: #131313;
@@ -605,6 +606,7 @@ object {
   position: relative;
   cursor: pointer;
   transition-duration: 0.5s;
+  font-weight: 700;
 }
 .btn-primary:after {
   content: "";
@@ -660,6 +662,7 @@ object {
   cursor: pointer;
   transition-duration: 0.5s;
   width: -moz-fit-content;
+  font-weight: 700;
   width: fit-content;
 }
 .btn-secondary:hover {
