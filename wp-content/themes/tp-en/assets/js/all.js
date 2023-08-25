@@ -154,6 +154,7 @@ const initRecruitmentPage = () => {
   new Swiper(".banner__jobs", {
     direction: "vertical",
     // loop: true,
+    centeredSlides: true,
     autoplay: {
         delay: 2000,
         disableOnInteraction: false,

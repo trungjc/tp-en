@@ -1255,21 +1255,27 @@ section {
   font-size: 6.4rem;
   font-weight: 800;
   color: #3a93fd;
-  margin-bottom: 2rem;
-  height: 6.4rem;
+  pointer-events: none;
+  line-height: 6.4rem;
+  margin-bottom: 1rem;
+  height: 7rem;
 }
 @media (max-width: 768px) {
   .banner__jobs {
-    height: 34px;
+    height: 40px;
+    margin-bottom: 2rem;
   }
 }
 .banner__jobs span {
   transition: all 0.5s;
-  display: block;
+  display: flex;
+  align-items: center;
+  justify-content: start;
 }
 @media (max-width: 768px) {
   .banner__jobs span {
     font-size: 24px;
+    justify-content: center;
   }
 }
 .banner__text p:first-child {
@@ -2011,7 +2017,7 @@ section {
 }
 
 .container-xl {
-  max-width: 1300px;
+  max-width: 1720px;
   margin-left: auto;
   margin-right: auto;
 }
