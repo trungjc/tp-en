@@ -37,7 +37,7 @@ $link = get_sub_field('link');
         <div class="life__imgs">
           <?php foreach ($images as $key => $value): ?>
               <div data-aos="zoom-out-up"
-                   data-aos-delay="<?php echo ($key + 2) * 500 ?>" class="life__img life__img-<?php echo $key + 1 ?>" style="background-image: url('<?php echo $value['image']['url'] ?>')"></div>
+                   data-aos-delay="<?php echo ($key + 2) * 400 ?>" class="life__img life__img-<?php echo $key + 1 ?>" style="background-image: url('<?php echo $value['image']['url'] ?>')"></div>
           <?php endforeach; ?>
 
         </div>

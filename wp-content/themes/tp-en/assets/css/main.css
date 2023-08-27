@@ -2104,10 +2104,18 @@ section {
   font-size: 4rem;
   font-weight: 700;
 }
+.development-path__title p {
+  margin-bottom: 2rem;
+}
 .development-path__title br {
   content: "";
   display: block;
   height: 2.5rem;
+}
+@media (max-width: 1536px) {
+  .development-path__title {
+    font-size: 3.2rem;
+  }
 }
 @media (max-width: 1024px) {
   .development-path__title {
