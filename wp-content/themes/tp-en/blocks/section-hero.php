@@ -12,6 +12,8 @@ $banner_items = get_sub_field('banner_items');
 <div class="banner-wrapper">
 
     <div class="main-banner">
+        <div class="main-banner__overlay-up"></div>
+        <div class="main-banner__overlay-down"></div>
         <div class="main-banner__img sp" style="background-image: url('<?php echo $mobile_image['url'] ?>'); display: <?php echo $video_mp4_url ? 'none' : 'block' ?>"></div>
       <?php if ( $video_mp4_url ) : ?>
           <video autoplay muted loop>

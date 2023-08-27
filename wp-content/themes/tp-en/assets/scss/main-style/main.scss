@@ -1089,7 +1089,7 @@ section {
   color: $color_10;
   font-size: 9.6rem;
   font-weight: 900;
-  border-bottom: 1px solid #ccc;
+  border-bottom: 1px solid #FFFFFF33;
   position: relative;
 
   .container {
@@ -1356,6 +1356,10 @@ section {
         background: linear-gradient(to left, transparent 50%, #fff 50%) right;
         background-size: 202%;
         transition: .5s ease-out;
+
+        @media (max-width: 768px) {
+          background: unset;
+        }
         &:hover {
           color: $color_9;
           //background: #fff;
@@ -1417,6 +1421,10 @@ section {
   margin-top: 0;
   filter: brightness(0.85);
 
+  @media (max-width: 768px) {
+    background-position: 20%;
+  }
+
   &__overlay {
     width: 50%;
     z-index: -1;
@@ -1427,8 +1435,11 @@ section {
     background: linear-gradient(90deg, #000 -23%, rgba(0, 0, 0, 0) 100%);
 
     @media (max-width: 768px) {
-      display: none;
-
+      bottom: 0;
+      top: auto;
+      width: 100%;
+      height: 50%;
+      background: linear-gradient(360deg, #031833 0%, rgba(3, 24, 51, 0.00) 100%);
     }
   }
 }
@@ -1445,8 +1456,8 @@ section {
   color: $color_12;
   pointer-events: none;
   line-height: 5.4rem;
-  margin-bottom: 1rem;
-  height: 6rem;
+  margin-bottom: 2rem;
+  height: 8rem;
   @media (max-width: 768px) {
     height: 40px;
     margin-bottom: 2rem;
@@ -1546,6 +1557,15 @@ section {
   margin-top: 3rem;
   p {
     margin-bottom: 2rem;
+
+    br {
+      height: 12px;
+      display: block;
+      content: '';
+    }
+    @media (max-width: 768px) {
+      font-size: 14px;
+    }
   }
 }
 
@@ -1679,11 +1699,12 @@ section {
     padding-bottom: 1rem;
 
     @media (max-width: 768px) {
+      padding-top: 0;
       p:first-child {
-        font-size: 22px;
+        font-size: 16px;
       }
       p:nth-child(2) {
-        font-size: 18px;
+        font-size: 14px;
       }
     }
   }
@@ -1696,6 +1717,11 @@ section {
       height: 10.4rem;
       border-radius: 50%;
       margin-right: 2.4rem;
+
+      @media (max-width: 768px) {
+        width: 48px;
+        height: 48px;
+      }
     }
   }
 
@@ -1916,7 +1942,7 @@ section {
 
   a {
     color: $color_17;
-    font-size: 2rem;
+    font-size: 1.6rem;
     margin-bottom: 1.6rem;
     text-transform: uppercase;
     letter-spacing: 4px;
@@ -1925,7 +1951,7 @@ section {
   &-title {
     a {
       color: $color_4;
-      font-size: 4rem;
+      font-size: 3.2rem;
       font-weight: 700;
       margin-bottom: 1.6rem;
       cursor: pointer;
@@ -1937,7 +1963,7 @@ section {
 
   &-date {
     color: $color_17;
-    font-size: 2rem;
+    font-size: 1.6rem;
   }
 
 }
@@ -2061,7 +2087,7 @@ section {
 
 .contact__location-img {
   display: block;
-  width: 67%;
+  width: 63%;
   height: 100%;
   //background: radial-gradient(50% 50.00% at 50% 50.00%, rgba(250, 251, 252, 0.00) 44.27%, #FAFBFC 100%), url('../images/company-map.svg') no-repeat;
   //background-image: url(../images/company-map.png);
@@ -2070,6 +2096,18 @@ section {
   right: 0;
   top: 0;
   z-index: -1;
+
+  @media (max-width: 1700px) {
+    width: 67%;
+  }
+
+  @media (max-width: 1400px) {
+    width: 64%;
+  }
+
+  @media (max-width: 1200px) {
+    width: 72%;
+  }
 }
 
 .contact__form {
@@ -2134,6 +2172,34 @@ section {
 .main-banner {
   position: relative;
 
+  &__overlay-up {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 80px;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.50) 0%, rgba(0, 0, 0, 0.00) 100%);
+    z-index: 1;
+
+    @media (max-width: 768px) {
+      display: none;
+    }
+  }
+
+  &__overlay-down {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 20%;
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.60) 0%, rgba(0, 0, 0, 0.00) 100%);
+    z-index: 1;
+
+    @media (max-width: 768px) {
+      display: none;
+    }
+  }
+
   video {
     height: 100vh;
     width: 100%;
@@ -2169,11 +2235,12 @@ section {
   background-size: cover;
   height: 100vh;
   height: 100svh;
+  filter: brightness(0.8);
 }
 
 .intro {
   background: #031833;
-  padding-top: 30rem;
+  padding-top: 15rem;
 
   @media (min-width: 768px) {
     .container {
@@ -2208,7 +2275,7 @@ section {
 }
 
 .intro__vision.intro__vision-first {
-  border-top: 1px solid #ccc;
+  border-top: 1px solid #FFFFFF33;
 }
 
 .pin-spacer {
@@ -2285,7 +2352,7 @@ section {
 }
 
 .container-xl {
-  max-width: 1720px;
+  max-width: 1920px;
   margin-left: auto;
   margin-right: auto;
 }
@@ -2342,13 +2409,13 @@ section {
 
   p {
     color: $color_10;
-    font-size: 3.2rem;
+    font-size: 2.4rem;
     font-weight: 700;
     letter-spacing: .3rem;
     padding-left: 1rem;
     padding-right: 1rem;
     @media (max-width: 1536px) {
-      font-size: 2.6rem;
+      font-size: 2.4rem;
     }
 
     span {
@@ -2613,13 +2680,13 @@ section {
     font-size: 2.4rem;
   }
   .reason__sub-title {
-    font-size: 1.4rem;
+    font-size: 14px;
   }
   .search__title {
-    font-size: 2.4rem;
+    font-size: 24px;
   }
   .search__sub-title {
-    font-size: 1.4rem;
+    font-size: 14px;
   }
 }
 
@@ -3191,6 +3258,7 @@ section {
     font-size: 14px;
     letter-spacing: 5.6px;
     font-weight: 400;
+    margin-bottom: 1rem;
   }
   .intro__title {
     color: $color_10;
@@ -3309,7 +3377,7 @@ section {
     letter-spacing: .7px;
 
     br {
-      height: 16px;
+      height: 12px;
     }
   }
   .sponsor__sub-title {

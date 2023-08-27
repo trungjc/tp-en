@@ -26,14 +26,15 @@ $(document).ready(function () {
     if ($("main#page-job-detail").length) {
       if (!isMobile()) {
         if ($(window).scrollTop() > 10) {
-          $(".header").addClass("hidden");
+          $(".header .flex").addClass("hidden");
         } else {
-          $(".header").removeClass("hidden");
+          $(".header .flex").removeClass("hidden");
         }
       }
 
     }
     if ($(window).scrollTop() > 10) {
+      if ($("main#page-job-detail").length) return;
       $(".header").removeClass("header--transparent");
     } else {
       $(".header").addClass("header--transparent");
@@ -48,6 +49,10 @@ $(document).ready(function () {
 const initContactPage = () => {
   if (!isMobile()) {
     $(".contact__location-img").height($(".contact__container").height());
+
+    $( window ).on( "resize", function() {
+      $(".contact__location-img").height($(".contact__container").height());
+    } );
   }
 }
 
@@ -271,8 +276,10 @@ const initJobDetailPage = () => {
   $(window).bind("scroll", function () {
     if (!isMobile()) {
       if (distance() > 0) {
+        $(".header").addClass('hidden');
         $(".job-detail__title").css("top", -distance() + "px");
       } else {
+        $(".header").removeClass('hidden');
         $(".job-detail__title").css("top", 0);
       }
     } else {

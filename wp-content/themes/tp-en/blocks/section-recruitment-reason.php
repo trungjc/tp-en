@@ -13,10 +13,8 @@ $reason = get_sub_field('reason');
               </div>
           </div>
           <div class="reason__image">
-              <img data-aos="fade-up" src="<?php echo $value['image1']['url'] ?>" alt="" />
+              <img src="<?php echo $value['image1']['url'] ?>" alt="" />
               <img
-                      data-aos="fade-up"
-                      data-aos-delay="200"
                       src="<?php echo $value['image2']['url'] ?>"
                       alt=""
               />
