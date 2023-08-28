@@ -826,6 +826,9 @@ section {
   width: 100%;
   background: white;
   z-index: 11;
+
+  background: rgba(250, 251, 252, 0.90);
+  backdrop-filter: blur(12.5px);
 }
 
 .header__language-sp {
@@ -850,6 +853,7 @@ section {
 
 .header--in-overlay {
   background: transparent;
+  backdrop-filter: unset;
 
   .header__left {
     span {
@@ -882,6 +886,7 @@ section {
 }
 
 .header--transparent {
+  backdrop-filter: unset;
   background: transparent;
   color: $color_4;
 
@@ -3547,6 +3552,10 @@ body:has(#page-news-detail) {
         }
         .logo-white {
           display: none;
+        }
+
+        span {
+          color: #131313;
         }
       }
 

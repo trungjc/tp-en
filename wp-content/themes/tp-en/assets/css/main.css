@@ -764,6 +764,8 @@ section {
   width: 100%;
   background: white;
   z-index: 11;
+  background: rgba(250, 251, 252, 0.9);
+  backdrop-filter: blur(12.5px);
 }
 
 .header__language-sp {
@@ -789,6 +791,7 @@ section {
 
 .header--in-overlay {
   background: transparent;
+  backdrop-filter: unset;
 }
 .header--in-overlay .header__left span {
   color: #fff !important;
@@ -807,6 +810,7 @@ section {
 }
 
 .header--transparent {
+  backdrop-filter: unset;
   background: transparent;
   color: #fff;
 }
@@ -3236,6 +3240,9 @@ body:has(#page-news-detail) header .header__left .logo-black {
 }
 body:has(#page-news-detail) header .header__left .logo-white {
   display: none;
+}
+body:has(#page-news-detail) header .header__left span {
+  color: #131313;
 }
 
 body:has(.banner-wrapper) .header--transparent .header__language li {
