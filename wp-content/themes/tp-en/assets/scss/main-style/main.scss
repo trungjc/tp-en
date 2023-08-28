@@ -39,6 +39,10 @@ $border-color_3: #031833;
   }
 }
 
+body {
+  background-color: #fafbfc;
+}
+
 * {
   box-sizing: border-box;
   border-width: 0;
@@ -2017,7 +2021,7 @@ section {
     bottom: 3.2rem;
     left: 2rem;
     color: $color_7;
-    font-size: 2rem;
+    font-size: 1.6rem;
   }
 
   p {
@@ -2212,6 +2216,7 @@ section {
     bottom: 4rem;
     left: 50%;
     transform: translate(-50%);
+    z-index: 1;
   }
 }
 
@@ -2639,12 +2644,12 @@ section {
   }
   .event-list__card-content {
     h3 {
-      font-size: 25px;
+      font-size: 3.2rem;
     }
 
     p {
       &:nth-child(1) {
-        font-size: 16px;
+        font-size: 1.6rem;
       }
     }
   }

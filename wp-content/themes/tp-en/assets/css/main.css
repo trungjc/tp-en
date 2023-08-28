@@ -8,6 +8,10 @@
     left: 0;
   }
 }
+body {
+  background-color: #fafbfc;
+}
+
 * {
   box-sizing: border-box;
   border-width: 0;
@@ -1796,7 +1800,7 @@ section {
   bottom: 3.2rem;
   left: 2rem;
   color: rgba(19, 19, 19, 0.5019607843);
-  font-size: 2rem;
+  font-size: 1.6rem;
 }
 .event-list__card-content p a {
   text-transform: uppercase;
@@ -1983,6 +1987,7 @@ section {
   bottom: 4rem;
   left: 50%;
   transform: translate(-50%);
+  z-index: 1;
 }
 
 .sp {
@@ -2396,10 +2401,10 @@ section {
     margin-top: 50px;
   }
   .event-list__card-content h3 {
-    font-size: 25px;
+    font-size: 3.2rem;
   }
   .event-list__card-content p:nth-child(1) {
-    font-size: 16px;
+    font-size: 1.6rem;
   }
   .event-detail-head h1 {
     font-size: 40px;
