@@ -17,7 +17,22 @@ $(document).ready(function () {
   initNewsDetailPage();
   initContactPage();
 
+  if ($("main#page-job-detail").length) {
+    if (!isMobile()) {
+      if ($(window).scrollTop() > 10) {
+        $(".header .flex").addClass("hidden");
+      } else {
+        $(".header .flex").removeClass("hidden");
+      }
+    }
 
+  }
+  if ($(window).scrollTop() > 10) {
+    if ($("main#page-job-detail").length) return;
+    $(".header").removeClass("header--transparent");
+  } else {
+    $(".header").addClass("header--transparent");
+  }
   $(document).on("scroll", () => {
     // if ($("main#page-job-detail").length) return;
     // if ($("#page-news-detail").length) return;
