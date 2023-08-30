@@ -208,12 +208,16 @@ const initRecruitmentPage = () => {
     search()
   });
 
-  console.log(jobList);
+  $(document).on('keypress',function(e) {
+    if(e.which == 13) {
+      search()
+    }
+  });
+
   jobList.forEach(job => {
     const elm = $(`#job__card-${job.ID} .tag-blue`);
     elm.on('click', () => {
       console.log($(`#job__card-${job.ID} .tag-blue`).text());
-      console.log(12);
       $(".search__department").val($(`#job__card-${job.ID} .tag-blue`).text());
       search()
     })
