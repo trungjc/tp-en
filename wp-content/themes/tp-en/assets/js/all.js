@@ -141,30 +141,30 @@ const initDevelopmentSlider = () => {
 };
 
 const paralaxImage = () => {
-  var timeout;
-  $(".life__right").mousemove(function (e) {
-    if (timeout) clearTimeout(timeout);
-    setTimeout(callParallax.bind(null, e), 200);
-  });
-
-  function callParallax(e) {
-    parallaxIt(e, ".life__img-1", -50);
-    parallaxIt(e, ".life__img-2", -35);
-    parallaxIt(e, ".life__img-3", -25);
-    parallaxIt(e, ".life__img-4", -15);
-  }
-
-  function parallaxIt(e, target, movement) {
-    var $this = $(".life__right");
-    var relX = e.pageX - $this.offset().left;
-    var relY = e.pageY - $this.offset().top;
-
-    TweenMax.to(target, 1, {
-      x: ((relX - $this.width() / 2) / $this.width()) * movement,
-      y: ((relY - $this.height() / 2) / $this.height()) * movement,
-      ease: Power2.easeOut,
-    });
-  }
+  // var timeout;
+  // $(".life__right").mousemove(function (e) {
+  //   if (timeout) clearTimeout(timeout);
+  //   setTimeout(callParallax.bind(null, e), 200);
+  // });
+  //
+  // function callParallax(e) {
+  //   parallaxIt(e, ".life__img-1", -50);
+  //   parallaxIt(e, ".life__img-2", -35);
+  //   parallaxIt(e, ".life__img-3", -25);
+  //   parallaxIt(e, ".life__img-4", -15);
+  // }
+  //
+  // function parallaxIt(e, target, movement) {
+  //   var $this = $(".life__right");
+  //   var relX = e.pageX - $this.offset().left;
+  //   var relY = e.pageY - $this.offset().top;
+  //
+  //   TweenMax.to(target, 1, {
+  //     x: ((relX - $this.width() / 2) / $this.width()) * movement,
+  //     y: ((relY - $this.height() / 2) / $this.height()) * movement,
+  //     ease: Power2.easeOut,
+  //   });
+  // }
 };
 
 
@@ -346,10 +346,12 @@ const initMainPage = () => {
       },
     });
   } else {
+    // const swiper = new Swiper(".sponsor__list", {
+    //   // loop: true,
+    //   slidesPerView: "auto",
+    // });
+
     initDevelopmentSlider();
-    setTimeout(() => {
-      paralaxImage();
-    }, 2000)
   }
 };
 
