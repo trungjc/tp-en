@@ -2571,6 +2571,11 @@ section {
   //justify-content: center;
   //align-items: center;
 
+  .swiper-wrapper {
+    display: flex;
+    align-items: center;
+  }
+
   img {
     width: 200px;
     height: fit-content;
@@ -3414,7 +3419,7 @@ section {
     flex-wrap: wrap;
 
     img {
-      max-width: 27%;
+      //max-width: 27%;
       height: auto;
     }
   }

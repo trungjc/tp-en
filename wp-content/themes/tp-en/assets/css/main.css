@@ -2338,6 +2338,10 @@ section {
   margin-bottom: 4rem;
 }
 
+.sponsor__list .swiper-wrapper {
+  display: flex;
+  align-items: center;
+}
 .sponsor__list img {
   width: 200px;
   height: fit-content;
@@ -3146,7 +3150,6 @@ section {
     flex-wrap: wrap;
   }
   .sponsor__list img {
-    max-width: 27%;
     height: auto;
   }
 }

@@ -345,6 +345,16 @@ const initMainPage = () => {
         prevEl: "#development-path-prev",
       },
     });
+
+    const sponsorSwiper = new Swiper(".sponsor__list", {
+      loop: true,
+      slidesPerView: 3,
+      // autoplay: {
+      //   // delay: 5000,
+      // },
+      spaceBetween: 40,
+      // centeredSlides: true
+    });
   } else {
     const swiper = new Swiper(".sponsor__list", {
       loop: true,
