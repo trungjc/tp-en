@@ -346,10 +346,15 @@ const initMainPage = () => {
       },
     });
   } else {
-    // const swiper = new Swiper(".sponsor__list", {
-    //   // loop: true,
-    //   slidesPerView: "auto",
-    // });
+    const swiper = new Swiper(".sponsor__list", {
+      loop: true,
+      slidesPerView: 5,
+      autoplay: {
+        // delay: 5000,
+      },
+      spaceBetween: 100,
+      // centeredSlides: true
+    });
 
     initDevelopmentSlider();
   }

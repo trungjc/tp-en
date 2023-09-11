@@ -2565,15 +2565,16 @@ section {
 }
 
 .sponsor__list {
-  display: flex;
-  gap: 0rem 6rem;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
+  //display: flex;
+  //gap: 0rem 6rem;
+  //flex-wrap: wrap;
+  //justify-content: center;
+  //align-items: center;
 
   img {
     width: 200px;
     height: fit-content;
+    margin: auto;
   }
 }
 

@@ -2338,16 +2338,10 @@ section {
   margin-bottom: 4rem;
 }
 
-.sponsor__list {
-  display: flex;
-  gap: 0rem 6rem;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-}
 .sponsor__list img {
   width: 200px;
   height: fit-content;
+  margin: auto;
 }
 
 @media (max-width: 1536px) {

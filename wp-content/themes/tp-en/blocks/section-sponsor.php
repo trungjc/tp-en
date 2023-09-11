@@ -10,11 +10,15 @@ $images = get_sub_field('images');
         <p class="sponsor__title">
           <?php echo $title ?>
         </p>
-        <div class="sponsor__list">
-          <?php foreach ($images as $key => $value): ?>
-              <img src="<?php echo $value['image']['url'] ?>" />
-          <?php endforeach; ?>
+        <div class="swiper sponsor__list">
+            <div class="swiper-wrapper">
+              <?php foreach ($images as $key => $value): ?>
+              <div class="swiper-slide">
+                  <img class="" src="<?php echo $value['image']['url'] ?>"/>
 
+              </div>
+              <?php endforeach; ?>
+            </div>
         </div>
     </div>
 </section>
