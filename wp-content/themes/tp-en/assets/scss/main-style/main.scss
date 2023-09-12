@@ -855,6 +855,7 @@ section {
 .header--in-overlay {
   background: transparent;
   backdrop-filter: unset;
+  -webkit-backdrop-filter: unset;
 
   .header__left {
     span {
@@ -888,6 +889,8 @@ section {
 
 .header--transparent {
   backdrop-filter: unset;
+
+  -webkit-backdrop-filter: unset;
   background: transparent;
   color: $color_4;
 
