@@ -58,7 +58,7 @@ if (have_posts()) :
                             <div class="flex items-center sm:mt-4">
                                 <img src="<?php echo get_template_directory_uri(); ?>/assets/images/location-white.svg" alt="" />
                                 <span class="text-xl ml-2 sm:text-[12px]"
-                                ><?php echo $address ?>aaa</span
+                                ><?php echo $address ?></span
                                 >
                             </div>
                             <div class="flex items-center mt-6 sm:mt-5">
