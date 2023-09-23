@@ -162,7 +162,7 @@ function theme_one_scripts()
 	wp_enqueue_style('aos', $root_css . 'aos.css');
 	wp_enqueue_style('style', get_template_directory_uri() .'/style.css');
 	wp_enqueue_style('main', $root_css . 'main.css');
-	wp_enqueue_style('vietnam-pro-font', 'https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@300;400;500;700&family=Rubik:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&display=swap');
+	// wp_enqueue_style('vietnam-pro-font', 'https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@300;400;500;700&family=Rubik:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&display=swap');
 
     wp_enqueue_script(
 		'jquery1',
