@@ -350,7 +350,7 @@ const initMainPage = () => {
       loop: true,
       slidesPerView: 3,
       autoplay: {
-        // delay: 5000,
+        delay: 3000,
       },
       spaceBetween: 40,
       // centeredSlides: true
@@ -360,7 +360,7 @@ const initMainPage = () => {
       loop: true,
       slidesPerView: 5,
       autoplay: {
-        // delay: 5000,
+        delay: 3000,
       },
       spaceBetween: 100,
       // centeredSlides: true
