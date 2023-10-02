@@ -1,3 +1,8 @@
+const isMobile = () => {
+  return $(window).width() <= 768;
+};
+
+
 $(document).ready(function () {
   console.log("isMobile", isMobile());
   AOS.init();
@@ -10,6 +15,31 @@ $(document).ready(function () {
   $(".nav-menu li a").click(function () {
     $(".nav-menu").toggleClass("open");
   });
+
+  const swiper = new Swiper(".sponsor__list", {
+    loop: true,
+    slidesPerView: 2,
+    autoplay: {
+      delay: 3500,
+      disableOnInteraction: false,
+    },
+    breakpoints: {
+      640: {
+        slidesPerView: 2,
+        spaceBetween: 20,
+      },
+      768: {
+        slidesPerView: 4,
+        spaceBetween: 40,
+      },
+      1024: {
+        slidesPerView: 5,
+        spaceBetween: 100,
+      },
+    },
+    // centeredSlides: true
+  });
+
 
   initMainPage();
   initJobDetailPage();
@@ -346,31 +376,11 @@ const initMainPage = () => {
       },
     });
 
-    const sponsorSwiper = new Swiper(".sponsor__list", {
-      loop: true,
-      slidesPerView: 3,
-      autoplay: {
-        delay: 3000,
-      },
-      spaceBetween: 40,
-      // centeredSlides: true
-    });
+    
   } else {
-    const swiper = new Swiper(".sponsor__list", {
-      loop: true,
-      slidesPerView: 5,
-      autoplay: {
-        delay: 3000,
-      },
-      spaceBetween: 100,
-      // centeredSlides: true
-    });
+   
 
     initDevelopmentSlider();
   }
-};
-
-const isMobile = () => {
-  return $(window).width() <= 768;
 };
 
