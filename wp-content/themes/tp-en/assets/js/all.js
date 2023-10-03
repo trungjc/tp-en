@@ -16,10 +16,10 @@ $(document).ready(function () {
     $(".nav-menu").toggleClass("open");
   });
 
-  const swiper = new Swiper(".sponsor__list", {
-   
+
+
+  const sponsorList = new Swiper(".sponsor__list", {
     slidesPerView: 2,
-    centeredSlides: true,
     autoplay: {
       delay: 3500,
       enabled: true,
