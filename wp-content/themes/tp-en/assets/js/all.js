@@ -17,12 +17,14 @@ $(document).ready(function () {
   });
 
   const swiper = new Swiper(".sponsor__list", {
-    loop: true,
+   
     slidesPerView: 2,
+    centeredSlides: true,
     autoplay: {
       delay: 3500,
       disableOnInteraction: false,
     },
+    loop: true,
     breakpoints: {
       640: {
         slidesPerView: 2,
@@ -37,7 +39,7 @@ $(document).ready(function () {
         spaceBetween: 100,
       },
     },
-    // centeredSlides: true
+   
   });
 
 
