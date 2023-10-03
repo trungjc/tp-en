@@ -1307,8 +1307,9 @@ section {
 }
 @media (max-width: 768px) {
   .banner__jobs {
-    height: 40px;
-    margin-bottom: 2rem;
+    line-height: 4.2rem;
+    margin-bottom: 3rem;
+    margin-top: 2rem;
   }
 }
 .banner__jobs span {
