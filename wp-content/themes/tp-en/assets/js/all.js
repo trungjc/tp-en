@@ -22,7 +22,7 @@ $(document).ready(function () {
     centeredSlides: true,
     autoplay: {
       delay: 3500,
-      disableOnInteraction: false,
+      enabled: true,
     },
     loop: true,
     breakpoints: {
