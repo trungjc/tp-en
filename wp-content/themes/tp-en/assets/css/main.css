@@ -1307,9 +1307,15 @@ section {
 }
 @media (max-width: 768px) {
   .banner__jobs {
+    height: auto;
+    max-height: 8rem;
     line-height: 4.2rem;
     margin-bottom: 3rem;
     margin-top: 2rem;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
   }
 }
 .banner__jobs span {

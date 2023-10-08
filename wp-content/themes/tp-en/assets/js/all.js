@@ -204,8 +204,11 @@ const paralaxImage = () => {
 const initRecruitmentPage = () => {
   if ($("main#page-recruitment").length === 0) return;
 
+  console.log($(".banner__jobs .swiper-slide"));
+  $(".banner__jobs .swiper-slide").each((i, item) => console.log(item.offsetHeight))
   new Swiper(".banner__jobs", {
     direction: "vertical",
+    autoHeight: true,
     // loop: true,
     centeredSlides: true,
     autoplay: {
