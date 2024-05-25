@@ -3297,6 +3297,8 @@ body:has(#page-contact) footer {
   background: #FFFFFF;
   box-shadow: 0px 2px 36px rgba(0, 0, 0, 0.15);
   border-radius: 20.25px;
+  display: flex;
+  flex-direction: column;
   position: relative;
 }
 .team__card:after {
@@ -3308,6 +3310,14 @@ body:has(#page-contact) footer {
   left: 0;
   background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.8) 24%, #FFFFFF 36%);
   border-radius: 0 0 30px 30px;
+}
+.team__card:nth-child(1) .team__image {
+  flex: initial;
+  display: block;
+}
+.team__card:nth-child(1) .team__image img {
+  width: auto;
+  height: auto;
 }
 @media (min-width: 992px) {
   .team__card:nth-child(1) {
@@ -3339,6 +3349,15 @@ body:has(#page-contact) footer {
 .team__body {
   position: relative;
   z-index: 1;
+}
+.team__image {
+  flex: 1;
+  display: flex;
+}
+.team__image img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
 }
 .team__name {
   font-weight: 700;
@@ -3375,12 +3394,12 @@ body:has(#page-contact) footer {
     box-shadow: 0px 5px 50px rgba(0, 0, 0, 0.2);
     border-radius: 30px;
     padding: 20px 50px;
-    font-size: 32px;
+    font-size: 26px;
     flex: 0 0 calc(33.333333% - 27px);
     max-width: calc(33.333333% - 27px);
   }
   .team__name {
-    font-size: 40px;
+    font-size: 30px;
   }
   .team__link {
     font-size: 20px;
@@ -3388,7 +3407,7 @@ body:has(#page-contact) footer {
     border: 2px solid #131313;
   }
   .team__position {
-    font-size: 28px;
+    font-size: 26px;
   }
 }
 @media (max-width: 991px) {
