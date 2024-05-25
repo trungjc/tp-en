@@ -76,7 +76,7 @@ function create_customs_post_types()
             'exclude_from_search' => true,  // you should exclude it from search results
             'show_in_nav_menus' => false,  // you shouldn't be able to add it to menus
             'has_archive' => true,  // it shouldn't have archive page
-            'position' => array('slug' => get_field('testimonial_position')),
+            // 'position' => array('slug' => get_field('testimonial_position')),
             'supports' => array('title', 'custom-fields', 'thumbnail', 'editor'),
         )
     );
