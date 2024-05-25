@@ -2,7 +2,7 @@ const gulp = require( 'gulp' ),
     fancylog = require( 'fancy-log' ),
     browserSync = require( 'browser-sync' ),
     server = browserSync.create(),
-    dev_url = 'https://tp-en.local';
+    dev_url = 'https://tp.local';
  
 
 /**

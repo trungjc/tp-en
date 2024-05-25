@@ -25,6 +25,9 @@
       <?php if (get_row_layout() == 'recruitment_block') : ?>
         <?php get_template_part('blocks/section', 'recruitment') ?>
       <?php endif; ?>
+      <?php if (get_row_layout() == 'team') : ?>
+        <?php get_template_part('blocks/section', 'team') ?>
+      <?php endif; ?>
       <?php if (get_row_layout() == 'quote') : ?>
         <?php get_template_part('blocks/section', 'quote') ?>
       <?php endif; ?>

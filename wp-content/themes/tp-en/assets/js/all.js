@@ -44,6 +44,21 @@ $(document).ready(function () {
   });
 
 
+  const team = new Swiper(".team-slider", {
+    slidesPerView: "auto",
+    centeredSlides: true,
+    spaceBetween: 20,
+    autoplay: {
+      delay: 3500,
+      enabled: true,
+      reverseDirection: true, 
+    },
+    loop: true,
+   
+  });
+
+
+
   initMainPage();
   initJobDetailPage();
   initRecruitmentPage();
