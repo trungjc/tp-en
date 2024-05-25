@@ -3850,6 +3850,7 @@ body:has(#page-contact) {
   &__image {
     flex: 1;
     display: flex;
+    min-height: 354px;
     img {
       width: 100%;
       height: auto;

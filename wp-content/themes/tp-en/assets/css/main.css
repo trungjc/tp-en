@@ -3353,6 +3353,7 @@ body:has(#page-contact) footer {
 .team__image {
   flex: 1;
   display: flex;
+  min-height: 354px;
 }
 .team__image img {
   width: 100%;
