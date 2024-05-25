@@ -670,12 +670,12 @@ class wfLog {
 	}
 	
 	/**
-	 * Test if the current request is for tp-login.php or xmlrpc.php
+	 * Test if the current request is for wp-login.php or xmlrpc.php
 	 *
 	 * @return boolean
 	 */
 	private static function isAuthRequest() {
-		if ((strpos($_SERVER['REQUEST_URI'], '/tp-login.php') !== false)) {
+		if ((strpos($_SERVER['REQUEST_URI'], '/wp-login.php') !== false)) {
 			return true;
 		}
 		return false;

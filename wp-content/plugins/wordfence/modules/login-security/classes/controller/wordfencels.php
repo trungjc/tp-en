@@ -491,7 +491,7 @@ END
 		 *    below the threshold.
 		 * 5. The request is not a WooCommerce login while WC integration is disabled
 		 */
-		if ($isLogin && !empty($username) && (!$this->_is_woocommerce_login() || Controller_Settings::shared()->get_bool(Controller_Settings::OPTION_ENABLE_WOOCOMMERCE_INTEGRATION))) { //Login attempt, not just a tp-login.php page load
+		if ($isLogin && !empty($username) && (!$this->_is_woocommerce_login() || Controller_Settings::shared()->get_bool(Controller_Settings::OPTION_ENABLE_WOOCOMMERCE_INTEGRATION))) { //Login attempt, not just a wp-login.php page load
 
 			$requireCAPTCHA = Controller_CAPTCHA::shared()->is_captcha_required();
 			

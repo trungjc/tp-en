@@ -68,12 +68,9 @@ if (have_posts()) :
                                 >
                             </div>
                         </div>
-		    </div>
-		    <div>
-			<div class="btn-secondary" style="float:left" id="open-send-cv-form"><?php echo $btnText; ?></div>
-			<div class="btn-secondary" style="float:left;margin-left:20px"><a href="https://docs.google.com/forms/d/e/1FAIpQLSeHWb4AzdTrIS6-sQFy-Ficiy3z-g_TUTgTzIhVrV7DESxXdg/viewform" target="_blank">Google Form</a></div>
-			<div style="clear:left"></div>
-		   </div>
+                    </div>
+                    <div class="btn-secondary" id="open-send-cv-form"><?php echo $btnText ?></div>
+
                 </div>
                 <div class="job-detail__content">
                   <?php echo $jobDetail ?>

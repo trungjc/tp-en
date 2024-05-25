@@ -148,7 +148,7 @@ class Cache_Dynamic_Resource extends Abstract_Optimization {
 			return false;
 		}
 
-		if ( 'tp-login.php' === $pagenow ) {
+		if ( 'wp-login.php' === $pagenow ) {
 			return false;
 		}
 

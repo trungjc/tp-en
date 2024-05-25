@@ -2350,7 +2350,7 @@ class wfUtils {
 		}
 		
 		if ( ! in_array( $scheme, array( 'http', 'https', 'relative' ) ) ) {
-			if ( is_ssl() && ! is_admin() && 'tp-login.php' !== $pagenow )
+			if ( is_ssl() && ! is_admin() && 'wp-login.php' !== $pagenow )
 				$scheme = 'https';
 			else
 				$scheme = parse_url( $url, PHP_URL_SCHEME );
@@ -2435,7 +2435,7 @@ class wfUtils {
 		}
 		
 		if ( ! in_array( $scheme, array( 'http', 'https', 'relative' ) ) ) {
-			if ( is_ssl() && ! is_admin() && 'tp-login.php' !== $pagenow )
+			if ( is_ssl() && ! is_admin() && 'wp-login.php' !== $pagenow )
 				$scheme = 'https';
 			else
 				$scheme = parse_url( $url, PHP_URL_SCHEME );

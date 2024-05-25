@@ -335,8 +335,8 @@ class Critical_CSS_Subscriber implements Subscriber_Interface {
 			return;
 		}
 
-		// Don't apply on tp-login.php/wp-register.php.
-		if ( 'tp-login.php' === $pagenow || 'wp-register.php' === $pagenow ) {
+		// Don't apply on wp-login.php/wp-register.php.
+		if ( 'wp-login.php' === $pagenow || 'wp-register.php' === $pagenow ) {
 			return;
 		}
 

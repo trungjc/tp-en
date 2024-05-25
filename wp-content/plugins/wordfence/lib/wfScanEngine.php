@@ -940,7 +940,7 @@ class wfScanEngine {
 				ABSPATH,
 				ABSPATH,
 				'/',
-				array('.htaccess', 'index.php', 'license.txt', 'readme.html', 'wp-activate.php', 'wp-admin', 'wp-app.php', 'wp-blog-header.php', 'wp-comments-post.php', 'wp-config-sample.php', 'wp-content', 'wp-cron.php', 'wp-includes', 'wp-links-opml.php', 'wp-load.php', 'tp-login.php', 'wp-mail.php', 'wp-pass.php', 'wp-register.php', 'wp-settings.php', 'tp-signup.php', 'wp-trackback.php', 'xmlrpc.php', '.well-known', 'cgi-bin')
+				array('.htaccess', 'index.php', 'license.txt', 'readme.html', 'wp-activate.php', 'wp-admin', 'wp-app.php', 'wp-blog-header.php', 'wp-comments-post.php', 'wp-config-sample.php', 'wp-content', 'wp-cron.php', 'wp-includes', 'wp-links-opml.php', 'wp-load.php', 'wp-login.php', 'wp-mail.php', 'wp-pass.php', 'wp-register.php', 'wp-settings.php', 'wp-signup.php', 'wp-trackback.php', 'xmlrpc.php', '.well-known', 'cgi-bin')
 			);
 			if (WF_IS_FLYWHEEL && !empty($_SERVER['DOCUMENT_ROOT'])) {
 				$scanPaths[] = new wfScanPath(

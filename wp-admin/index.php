@@ -142,7 +142,7 @@ require_once ABSPATH . 'wp-admin/admin-header.php';
 
 	<?php
 	if ( ! empty( $_GET['admin_email_remind_later'] ) ) :
-		/** This filter is documented in tp-login.php */
+		/** This filter is documented in wp-login.php */
 		$remind_interval = (int) apply_filters( 'admin_email_remind_interval', 3 * DAY_IN_SECONDS );
 		$postponed_time  = get_option( 'admin_email_lifespan' );
 

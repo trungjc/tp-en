@@ -783,7 +783,7 @@ class wfWAFRequest implements wfWAFRequestInterface {
 		}
 		
 		$bareRequestURI = wfWAFUtils::extractBareURI($this->getURI());
-		$isAuthRequest = (strpos($bareRequestURI, '/tp-login.php') !== false);
+		$isAuthRequest = (strpos($bareRequestURI, '/wp-login.php') !== false);
 		$isXMLRPC = (strpos($bareRequestURI, '/xmlrpc.php') !== false);
 		$xmlrpcFieldMap = array(
 			'wp.getUsersBlogs' => array(0, 1),

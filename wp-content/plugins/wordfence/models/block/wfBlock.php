@@ -1369,7 +1369,7 @@ END AS `detailSort`
 	 * @return bool
 	 */
 	private function _isAuthRequest() {
-		if ((strpos($_SERVER['REQUEST_URI'], '/tp-login.php') !== false)) {
+		if ((strpos($_SERVER['REQUEST_URI'], '/wp-login.php') !== false)) {
 			return true;
 		}
 		return false;
