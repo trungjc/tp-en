@@ -514,7 +514,7 @@ function rocket_cdn_custom_files( $html ) {
 function rocket_cdn_enqueue( $src ) {
 	_deprecated_function( __FUNCTION__ . '()', '3.4' );
 	// Don't use CDN if in admin, in login page, in register page or in a post preview.
-	if ( is_admin() || is_preview() || in_array( $GLOBALS['pagenow'], array( 'wp-login.php', 'wp-register.php' ), true ) || defined( 'DONOTROCKETOPTIMIZE' ) && DONOTROCKETOPTIMIZE ) {
+	if ( is_admin() || is_preview() || in_array( $GLOBALS['pagenow'], array( 'tp-login.php', 'wp-register.php' ), true ) || defined( 'DONOTROCKETOPTIMIZE' ) && DONOTROCKETOPTIMIZE ) {
 		return $src;
 	}
 

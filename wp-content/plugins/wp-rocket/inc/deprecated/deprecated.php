@@ -3019,7 +3019,7 @@ if ( ! function_exists( 'rocket_cache_dynamic_resource' ) ) {
 			return $src;
 		}
 
-		if ( 'wp-login.php' === $pagenow ) {
+		if ( 'tp-login.php' === $pagenow ) {
 			return $src;
 		}
 
@@ -3157,7 +3157,7 @@ if ( ! function_exists( 'get_rocket_browser_cache_busting' ) ) {
 			return $src;
 		}
 
-		if ( 'wp-login.php' === $pagenow ) {
+		if ( 'tp-login.php' === $pagenow ) {
 			return $src;
 		}
 

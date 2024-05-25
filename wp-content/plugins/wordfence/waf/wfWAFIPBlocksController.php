@@ -276,7 +276,7 @@ class wfWAFIPBlocksController
 					}
 					
 					if (!$skipCountryBlocking && $blockedCountries && !$bypassCookieSet) {
-						$isAuthRequest = (strpos($bareRequestURI, '/wp-login.php') !== false);
+						$isAuthRequest = (strpos($bareRequestURI, '/tp-login.php') !== false);
 						$isXMLRPC = (strpos($bareRequestURI, '/xmlrpc.php') !== false);
 						$isUserLoggedIn = wfWAF::getInstance()->parseAuthCookie() !== false;
 						
@@ -313,7 +313,7 @@ class wfWAFIPBlocksController
 		if (is_array($otherBlocks)) {
 			$blocks = $otherBlocks['blocks'];
 			$bareRequestURI = wfWAFUtils::extractBareURI($request->getURI());
-			$isAuthRequest = (stripos($bareRequestURI, '/wp-login.php') !== false);
+			$isAuthRequest = (stripos($bareRequestURI, '/tp-login.php') !== false);
 			foreach ($blocks as $b) {
 				if (isset($b['expiration']) && $b['expiration'] < time() && $b['expiration'] != 0) {
 					continue;
@@ -336,7 +336,7 @@ class wfWAFIPBlocksController
 		$lockouts = @wfWAFUtils::json_decode($lockoutsJSON, true);
 		if (is_array($lockouts)) {
 			$lockouts = $lockouts['lockouts'];
-			$isAuthRequest = (stripos($bareRequestURI, '/wp-login.php') !== false) || (stripos($bareRequestURI, '/xmlrpc.php') !== false);
+			$isAuthRequest = (stripos($bareRequestURI, '/tp-login.php') !== false) || (stripos($bareRequestURI, '/xmlrpc.php') !== false);
 			if ($isAuthRequest) {
 				foreach ($lockouts as $l) {
 					if (isset($l['expiration']) && $l['expiration'] < time()) {

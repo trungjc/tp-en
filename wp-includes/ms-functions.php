@@ -1628,7 +1628,7 @@ You can log in to the administrator account with the following information:
 
 Username: USERNAME
 Password: PASSWORD
-Log in here: BLOG_URLwp-login.php
+Log in here: BLOG_URLtp-login.php
 
 We hope you enjoy your new site. Thanks!
 
@@ -2114,7 +2114,7 @@ function signup_nonce_fields() {
  * @return array
  */
 function signup_nonce_check( $result ) {
-	if ( ! strpos( $_SERVER['PHP_SELF'], 'wp-signup.php' ) ) {
+	if ( ! strpos( $_SERVER['PHP_SELF'], 'tp-signup.php' ) ) {
 		return $result;
 	}
 

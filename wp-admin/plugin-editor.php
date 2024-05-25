@@ -312,7 +312,7 @@ if ( ! in_array( 'plugin_editor_notice', $dismissed_pointers, true ) ) :
 	// Get a back URL.
 	$referer = wp_get_referer();
 
-	$excluded_referer_basenames = array( 'plugin-editor.php', 'wp-login.php' );
+	$excluded_referer_basenames = array( 'plugin-editor.php', 'tp-login.php' );
 
 	$return_url = admin_url( '/' );
 	if ( $referer ) {

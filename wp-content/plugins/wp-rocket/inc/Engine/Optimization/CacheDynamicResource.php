@@ -199,7 +199,7 @@ class CacheDynamicResource extends AbstractOptimization implements Subscriber_In
 			return false;
 		}
 
-		if ( 'wp-login.php' === $pagenow ) {
+		if ( 'tp-login.php' === $pagenow ) {
 			return false;
 		}
 

@@ -1807,7 +1807,7 @@ SQL
 				$redirectUrl = add_query_arg('reset-link-sent', 'true', wc_get_account_endpoint_url('lost-password'));
 			}
 			else {
-				$redirectUrl = !empty($_REQUEST['redirect_to']) ? $_REQUEST['redirect_to'] : 'wp-login.php?checkemail=confirm';
+				$redirectUrl = !empty($_REQUEST['redirect_to']) ? $_REQUEST['redirect_to'] : 'tp-login.php?checkemail=confirm';
 			}
 			wp_safe_redirect($redirectUrl);
 			exit;
@@ -2693,7 +2693,7 @@ SQL
 		return false;
 	}
 	public static function authenticateFilter($authUser, $username, $passwd) {
-		wfConfig::inc('totalLoginHits'); //The total hits to wp-login.php including logins, logouts and just hits.
+		wfConfig::inc('totalLoginHits'); //The total hits to tp-login.php including logins, logouts and just hits.
 		$IP = wfUtils::getIP();
 		$secEnabled = wfConfig::get('loginSecurityEnabled');
 		
@@ -3426,7 +3426,7 @@ SQL
 				$type = 301;
 			}
 		}
-		else if (strpos($_SERVER['REQUEST_URI'], '/wp-login.php') !== false) {
+		else if (strpos($_SERVER['REQUEST_URI'], '/tp-login.php') !== false) {
 			$type = 1;
 		}
 		return $type;

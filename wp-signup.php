@@ -35,7 +35,7 @@ if ( ! is_multisite() ) {
 }
 
 if ( ! is_main_site() ) {
-	wp_redirect( network_site_url( 'wp-signup.php' ) );
+	wp_redirect( network_site_url( 'tp-signup.php' ) );
 	die();
 }
 
@@ -395,7 +395,7 @@ function signup_another_blog( $blogname = '', $blog_title = '', $errors = '' ) {
 	<?php } ?>
 
 	<p><?php _e( 'If you are not going to use a great site domain, leave it for a new user. Now have at it!' ); ?></p>
-	<form id="setupform" method="post" action="wp-signup.php">
+	<form id="setupform" method="post" action="tp-signup.php">
 		<input type="hidden" name="stage" value="gimmeanotherblog" />
 		<?php
 		/**
@@ -529,7 +529,7 @@ function confirm_another_blog_signup( $domain, $path, $blog_title, $user_name, $
 		restore_current_blog();
 	} else {
 		$home_url  = 'http://' . $domain . $path;
-		$login_url = 'http://' . $domain . $path . 'wp-login.php';
+		$login_url = 'http://' . $domain . $path . 'tp-login.php';
 	}
 
 	$site = sprintf(
@@ -622,10 +622,10 @@ function signup_user( $user_name = '', $user_email = '', $errors = '' ) {
 		printf( __( 'Get your own %s account in seconds' ), get_network()->site_name );
 	?>
 	</h2>
-	<form id="setupform" method="post" action="wp-signup.php" novalidate="novalidate">
+	<form id="setupform" method="post" action="tp-signup.php" novalidate="novalidate">
 		<input type="hidden" name="stage" value="validate-user-signup" />
 		<?php
-		/** This action is documented in wp-signup.php */
+		/** This action is documented in tp-signup.php */
 		do_action( 'signup_hidden_fields', 'validate-user' );
 		?>
 		<?php show_user_form( $user_name, $user_email, $errors ); ?>
@@ -678,7 +678,7 @@ function validate_user_signup() {
 		return false;
 	}
 
-	/** This filter is documented in wp-signup.php */
+	/** This filter is documented in tp-signup.php */
 	wpmu_signup_user( $user_name, $user_email, apply_filters( 'add_signup_meta', array() ) );
 
 	confirm_user_signup( $user_name, $user_email );
@@ -710,7 +710,7 @@ function confirm_user_signup( $user_name, $user_email ) {
 	</p>
 	<p><?php _e( 'If you do not activate your username within two days, you will have to sign up again.' ); ?></p>
 	<?php
-	/** This action is documented in wp-signup.php */
+	/** This action is documented in tp-signup.php */
 	do_action( 'signup_finished' );
 }
 
@@ -765,12 +765,12 @@ function signup_blog( $user_name = '', $user_email = '', $blogname = '', $blog_t
 		$blogname = $user_name;
 	}
 	?>
-	<form id="setupform" method="post" action="wp-signup.php">
+	<form id="setupform" method="post" action="tp-signup.php">
 		<input type="hidden" name="stage" value="validate-blog-signup" />
 		<input type="hidden" name="user_name" value="<?php echo esc_attr( $user_name ); ?>" />
 		<input type="hidden" name="user_email" value="<?php echo esc_attr( $user_email ); ?>" />
 		<?php
-		/** This action is documented in wp-signup.php */
+		/** This action is documented in tp-signup.php */
 		do_action( 'signup_hidden_fields', 'validate-site' );
 		?>
 		<?php show_blog_form( $blogname, $blog_title, $errors ); ?>
@@ -830,7 +830,7 @@ function validate_blog_signup() {
 		}
 	}
 
-	/** This filter is documented in wp-signup.php */
+	/** This filter is documented in tp-signup.php */
 	$meta = apply_filters( 'add_signup_meta', $signup_meta );
 
 	wpmu_signup_blog( $domain, $path, $blog_title, $user_name, $user_email, $meta );
@@ -880,7 +880,7 @@ function confirm_blog_signup( $domain, $path, $blog_title, $user_name = '', $use
 		</li>
 	</ul>
 	<?php
-	/** This action is documented in wp-signup.php */
+	/** This action is documented in tp-signup.php */
 	do_action( 'signup_finished' );
 }
 
@@ -965,7 +965,7 @@ $current_user = wp_get_current_user();
 if ( 'none' === $active_signup ) {
 	_e( 'Registration has been disabled.' );
 } elseif ( 'blog' === $active_signup && ! is_user_logged_in() ) {
-	$login_url = wp_login_url( network_site_url( 'wp-signup.php' ) );
+	$login_url = wp_login_url( network_site_url( 'tp-signup.php' ) );
 	/* translators: %s: Login URL. */
 	printf( __( 'You must first <a href="%s">log in</a>, and then you can create a new site.' ), $login_url );
 } else {

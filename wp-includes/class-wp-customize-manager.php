@@ -4697,7 +4697,7 @@ final class WP_Customize_Manager {
 		global $_registered_pages;
 
 		$referer                    = wp_get_referer();
-		$excluded_referer_basenames = array( 'customize.php', 'wp-login.php' );
+		$excluded_referer_basenames = array( 'customize.php', 'tp-login.php' );
 
 		if ( $this->return_url ) {
 			$return_url = $this->return_url;
