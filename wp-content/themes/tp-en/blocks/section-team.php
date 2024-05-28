@@ -6,7 +6,7 @@ $title = get_sub_field('title');
 <section class="team">
     <div class="container container-xl">
         <div class="section-title">
-            <h2><?php echo $title ?></h2>
+            <div><?php echo $title ?></div>
         </div>
         <div class="team__block ">
             <?php foreach ($team as $key => $value): ?>
