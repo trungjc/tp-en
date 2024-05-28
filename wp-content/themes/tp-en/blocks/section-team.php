@@ -57,7 +57,7 @@ $title = get_sub_field('title');
                             <?php echo $value->post_content ?>
                         </div> -->
                         <div class="team__position"><?php echo get_post_field('position', $value->ID) ?></div>
-                        <a class="team__link" href="<?php echo get_post_field('linkin', $value->ID) ?>"
+                        <a class="team__link" href="<?php echo get_post_field('linkedIn', $value->ID) ?>"
                             target="_blank">LinkedIn
                             <svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M13.5 10.9998L21.7 2.7998" stroke="#131313" stroke-width="2.5"
