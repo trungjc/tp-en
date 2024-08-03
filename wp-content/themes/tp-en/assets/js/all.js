@@ -23,7 +23,7 @@ $(document).ready(function () {
     autoplay: {
       delay: 3500,
       enabled: true,
-      reverseDirection: true, 
+      reverseDirection: false, 
     },
     loop: true,
     breakpoints: {
@@ -51,7 +51,7 @@ $(document).ready(function () {
     autoplay: {
       delay: 3500,
       enabled: true,
-      reverseDirection: true, 
+      reverseDirection: false, 
     },
     loop: true,
    

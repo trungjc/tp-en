@@ -26,13 +26,13 @@
         <?php get_template_part('blocks/section', 'recruitment') ?>
       <?php endif; ?>
       <?php if (get_row_layout() == 'team') : ?>
-        <?php get_template_part('blocks/section', 'team') ?>
+        <?php get_template_part('blocks/section', 'teams') ?>
       <?php endif; ?>
       <?php if (get_row_layout() == 'quote') : ?>
         <?php get_template_part('blocks/section', 'quote') ?>
       <?php endif; ?>
       <?php if (get_row_layout() == 'new') : ?>
-        <?php get_template_part('blocks/section', 'new') ?>
+        <?php get_template_part('blocks/section', 'news') ?>
       <?php endif; ?>
       <?php if (get_row_layout() == 'contact') : ?>
         <?php get_template_part('blocks/section', 'contact') ?>
