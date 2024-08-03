@@ -75,5 +75,4 @@ $title = get_sub_field('title');
             <?php endforeach; ?>
         </div>
     </div>
-    </div>
 </section>
