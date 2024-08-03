@@ -44,6 +44,16 @@
             </div>
 
             <div class="flex">
+            <nav class="nav-desktop">
+              <?php
+              wp_nav_menu(array(
+                'theme_location' => 'primary',
+                'container' => false,
+                'menu_class' => 'nav nav-pills ',
+                'walker' => new WP_Bootstrap_Navwalker()
+              ));
+              ?>
+              </nav>
                 <ul class="header__language">
                   <?php
                   pll_the_languages(array(

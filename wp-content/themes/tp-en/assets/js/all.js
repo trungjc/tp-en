@@ -4,7 +4,13 @@ const isMobile = () => {
 
 
 $(document).ready(function () {
-  console.log("isMobile", isMobile());
+  
+  $('.swiper-new-button-prev').on('click', function(){
+    $(this).closest('.new-section').find('.swiper-button-prev').click();
+  })
+  $('.swiper-new-button-next').on('click', function(){
+    $(this).closest('.new-section').find('.swiper-button-next').click();
+  })
   AOS.init();
   $(".menu").click(function () {
     $(this).toggleClass("open menu--white");
@@ -57,6 +63,22 @@ $(document).ready(function () {
    
   });
 
+  const newSlider = new Swiper(".new-slider", {
+    slidesPerView: "auto",
+    centeredSlides: true,
+    spaceBetween: 20,
+    autoplay: {
+      delay: 3500,
+      enabled: true,
+      reverseDirection: false, 
+    },
+    loop: true,
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+   
+  });
 
 
   initMainPage();

@@ -41,36 +41,81 @@ if (!empty($category_slug)) {
 // Fetch the posts
 $posts = get_posts($args);
 
-// Loop through the posts and display them
-if ($posts) {
-    foreach ($posts as $post) {
-        setup_postdata($post);
-        ?>
-        <h2><?php the_title(); ?></h2>
-        <div><?php the_excerpt(); ?></div>
-        <?php
-    }
-    wp_reset_postdata();
-} else {
-    echo 'No posts found.';
-}
+
 ?>
 
-<section class="new">
+<section class="new-section">
     <div class="container container-xl">
-        <div class="section-title">
-            <div><?php echo $title ?></div>
-            <div><?php echo $sub_title ?></div>
-            <div><?php echo $post_number ?></div>
-        </div>
-        <div class=" new-slider">
-            <div class="swiper-wrapper">
-                <div class="new__card swiper-slide">
-
+        <div class="flex">
+            <div class="section-title">
+                <div class="life__sub-title"><?php echo $title ?></div>
+                <div class="life__title"><?php echo $sub_title ?></div>
+                <div class="arrow-control-new-slider">
+                    <div class="swiper-new-button-prev"></div>
+                    <div class="swiper-new-button-next"></div>
                 </div>
+                <?php if ($link): ?>
+                    <div class="life__btn d-none d-md-block">
+                        <a class="btn-primary btn-primary--black" href="<?php echo $link['url'] ?>">
+                            <span><?php echo $link['title'] ?></span>
+                        </a>
+                    </div>
+                <?php endif; ?>
             </div>
+
+            <?php
+
+            // Loop through the posts and display them
+            if ($posts) { ?>
+                <div class="new-slider-container ">
+                    <div class="swiper new-slider ">
+                    <div class="swiper-wrapper">
+                        <?php
+                        foreach ($posts as $post) {
+                            setup_postdata($post);
+                            ?>
+                            <div class="new__card swiper-slide">
+                                <article class="event-list__card">
+                                    <a href="<?php the_permalink(); ?>">
+                                        <?php the_post_thumbnail('large') ?>
+                                    </a>
+                                    <div class="event-list__card-content">
+                                        <p style="margin-bottom: 1rem"><?php $post_tags = get_the_tags();
+                                        if ($post_tags) {
+                                            foreach ($post_tags as $tag) {
+                                                echo '<a style="margin-right: 2rem;" href="' . get_tag_link($tag->term_id) . '">' . $tag->name . '</a>';
+                                            }
+                                        } ?></p>
+                                        <h3>
+                                            <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
+                                        </h3>
+                                        <p class="date"><?php the_date(); ?></p>
+                                    </div>
+                                </article>
+
+                            </div>
+
+                            <?php
+                        }
+                        wp_reset_postdata();
+                        ?>
+
+                    </div>
+                    <div class="swiper-button-prev" style="opacity:0"></div>
+                    <div class="swiper-button-next" style="opacity:0"></div>
+                    </div>
+                    
+                </div>
+            <?php }
+            ?>
+             <?php if ($link): ?>
+                    <div class="life__btn d-flex d-md-none justify-content-center">
+                        <a class="btn-primary btn-primary--black" href="<?php echo $link['url'] ?>">
+                            <span><?php echo $link['title'] ?></span>
+                        </a>
+                    </div>
+                <?php endif; ?>
         </div>
+
     </div>
 </section>
-
-
