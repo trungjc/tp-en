@@ -62,16 +62,12 @@ $(document).ready(function () {
     loop: true,
    
   });
-
+console.log('cache')
   const newSlider = new Swiper(".new-slider", {
     slidesPerView: "auto",
-    centeredSlides: true,
+    // centeredSlides: true,
     spaceBetween: 20,
-    autoplay: {
-      delay: 3500,
-      enabled: true,
-      reverseDirection: false, 
-    },
+    
     loop: true,
     navigation: {
       nextEl: ".swiper-button-next",
