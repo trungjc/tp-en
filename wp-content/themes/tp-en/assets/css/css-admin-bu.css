@@ -1,0 +1,231 @@
+.pagination .nav-links {
+    gap: 10px;
+    display: flex;
+}
+.event-list__card > a {
+    position: relative;
+}
+.event-list__card > a:after {
+    content:"";
+    padding-top: 70.5%;
+    display: block;
+    
+}
+.event-list__card > a img {
+    position: absolute;
+    left: 0;
+    top:0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.team {
+	overflow: hidden;
+}
+body ,.event-list__card-content h3{
+	color: #031833;
+}
+ .team__name {
+	white-space:nowrap
+}
+.footer {
+	background-color: #031833;
+}
+.page-numbers.current {
+    opacity: 0.4;
+}
+.quote .swiper-slide__author img {object-fit:cover}
+
+
+.event-detail-head ,.event-head{
+    padding-top: 20rem;
+}
+.header--transparent {
+    backdrop-filter: unset!important;
+    -webkit-backdrop-filter: unset !important;
+}
+.single .nav-desktop ul a,.archive .nav-desktop ul a,.page-template-contact-template .nav-desktop ul a {
+	color: #031833;
+}
+
+
+.header:not(.header--transparent) ul .active a{
+	opacity: 1;
+}
+.header:not(.header--transparent) ul  a{
+	opacity: 0.5;
+}
+.nav-desktop ul {
+  display: flex;
+  margin-right: 20px;
+}
+.nav-desktop ul li {
+  margin: 0 20px;
+}
+.nav-desktop ul a {
+  font-size: 16px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+@media (min-width: 768px){
+
+	.quote .swiper-slide__content {
+		margin-top: 18rem;
+	}
+	.swiper-button-next, .swiper-button-prev {
+		margin-top: 1rem;
+	}
+}
+
+
+.new-section .container {
+  padding-right: 0;
+}
+.new-section .section-title {
+  max-width: 30%;
+  flex: 0 0 30%;
+  margin-top: 50px;
+}
+.new-section .swiper-wrapper {
+  display: flex;
+}
+.new-section .swiper-slide {
+  height: auto;
+}
+.new-section .new-slider {
+    max-width: 100%;
+    flex: 0;
+}
+.new-section .new-slider-container {
+  max-width: 70%;
+  flex: 0 0 70%;
+  position: relative;
+}
+.new-section .new-slider-container .swiper {
+  padding: 50px 40px;
+	width: 100%;
+}
+.swiper-new-button-prev:hover,.swiper-new-button-next:hover {
+	opacity: 0.8;
+}
+.swiper-new-button-prev,.swiper-new-button-next {
+        background: rgba(238, 238, 238, 1) url(/wp-content/themes/tp-en/assets/images/arrow-right-black.svg);
+	cursor: pointer;
+    width: 80px;
+    height: 50px;
+    border-radius: 40px;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.swiper-new-button-prev {
+	position: relative;
+	transform: rotate(-180deg);
+	
+}
+.arrow-control-new-slider {
+    display: flex;
+    margin: 0 0 30px;
+    gap: 20px;
+}
+.new-section .new-slider-container:after {
+	opacity: 0;
+  content: "";
+  background: linear-gradient(90deg, #FAFBFC 85.5%, rgba(250, 251, 252, 0) 100%);
+  position: absolute;
+  z-index: 1;
+  left: 0px;
+  width: 150px;
+  height: 100%;
+  top: 0;
+}
+.new-section .swiper-slide {
+  width: 450px;
+  padding: 0 ;
+}
+.new-section .swiper-slide .event-list__card {
+  width: 100%;
+  height: 100%;
+  -webkit-box-shadow: none;
+	-moz-box-shadow: none;
+	box-shadow: none;
+	border: 1px solid #ccc;
+}
+.new-section .swiper-slide .event-list__card > a {
+  display: flex;
+  height: 250px;
+}
+.new-section .swiper-slide .event-list__card > a img {
+  object-fit: cover;
+}
+
+.life__btn.d-flex {
+		display: none;
+	}
+
+@media (max-width: 768px){
+	.new-section .new-slider-container .swiper {
+		padding-top: 40px;
+	}
+	.life__btn.d-none {
+		display: none;
+	}
+	.life__btn.d-flex {
+		display: flex;
+		justify-content: center;
+	}
+	.arrow-control-new-slider {
+		display: none;
+	}
+	.new-section .container {
+    padding-left: 0;
+}
+	.arrow-control-new-slider{
+		    justify-content: center;
+	}
+	.nav-desktop ul {
+		display: none;
+	}
+	.new-section .new-slider-container:after {
+		display: none
+	}
+	.section-title {
+		        text-align: center;
+	}
+	.new-section .swiper-slide {
+		width: 260px;
+	}
+	.new-section .flex{
+		flex-direction: column;
+	}
+	.new-section .new-slider-container ,.new-section .section-title {
+		flex: 1;
+		max-width: 100%;
+	}
+	.banner__jobs {
+			height: 100px;
+	}
+
+}
+
+input[type="file"] {
+	height: 60px;
+}
+.event-detail-content.container {
+	text-align: justify;
+}
+.nav-links {
+    margin: 50px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+   
+}
+.nav-links a, .nav-links span {
+	padding: 3px 10px;
+        border: 1px solid #111;
+        min-width: 30px;
+        text-align: center;
+        border-radius: 5px;
+}
