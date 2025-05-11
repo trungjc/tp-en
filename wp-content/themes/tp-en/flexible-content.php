@@ -37,5 +37,8 @@
       <?php if (get_row_layout() == 'contact') : ?>
         <?php get_template_part('blocks/section', 'contact') ?>
       <?php endif; ?>
+      <?php if (get_row_layout() == 'products') : ?>
+        <?php get_template_part('blocks/section', 'products') ?>
+      <?php endif; ?>
     <?php endwhile; ?>
   <?php endif; ?>
