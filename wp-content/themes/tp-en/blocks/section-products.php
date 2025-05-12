@@ -25,14 +25,15 @@ $products = get_sub_field('product');
               $description = $product['description'];
               $bg_url = $product['background_image'];
               $image_app = $product['image_app'];
-              $ch_play_url = $product['ch_play']['url'] ?? '#';
-              $ios = $product['ios']['url'] ?? '#';
+              $ch_play_url = $product['ch_play']['url'] ?? '';
+              $ios = $product['ios']['url'] ?? '';
               $text_color = $product['text_color'];
+              $no_padding_right = $product['no_padding_right'];
               
 
               ?>
               <div
-                class="app-item <?php echo $text_color?>"
+                class="app-item <?php echo $text_color?> swiper-slide padding-right-<?php echo $no_padding_right?> "
                 >
                 <img src="<?php echo esc_url($bg_url); ?>" class="bg-image" />
                 <!-- Text Section -->

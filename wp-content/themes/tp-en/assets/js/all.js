@@ -50,17 +50,33 @@ $(document).ready(function () {
   });
 
 
-  const swiperApp = new Swiper('.app-slider', {
-    slidesPerView: 'auto',       // Enables variable width slides
-    spaceBetween: 40,            // Gap between slides
-    centeredSlides: false,       // Align to left
-    grabCursor: true,            // Cursor style
-    loop: true,                 // Set true if you want infinite loop
-    freeMode: true,              // Allows momentum scroll
-    autoplay: {
-      delay: 3000,            // 3 seconds between slides
-      disableOnInteraction: false, // Keeps autoplay going after interaction
+//   const swiperApp = new Swiper('.app-slider', {
+//     slidesPerView: 'auto',       // Enables variable width slides
+//     spaceBetween: 40,            // Gap between slides
+//     centeredSlides: false,       // Align to left
+//     grabCursor: true,            // Cursor style
+//     loop: true,                 // Set true if you want infinite loop
+//     freeMode: true,              // Allows momentum scroll
+//     autoplay: {
+//       delay: 3000,            // 3 seconds between slides
+//       disableOnInteraction: false, // Keeps autoplay going after interaction
+//     },
+//   });
+	
+	const swiperApp = new Swiper(".app-slider", {
+     slidesPerView: "auto",
+    // centeredSlides: true,
+    spaceBetween: 20,
+    loop: true,
+     autoplay: {
+      delay: 3000,           
+      disableOnInteraction: false, 
     },
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+   
   });
 
 
@@ -76,7 +92,7 @@ $(document).ready(function () {
     loop: true,
    
   });
-console.log('cache')
+
   const newSlider = new Swiper(".new-slider", {
     slidesPerView: "auto",
     // centeredSlides: true,
