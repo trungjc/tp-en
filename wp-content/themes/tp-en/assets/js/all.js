@@ -63,21 +63,16 @@ $(document).ready(function () {
 //     },
 //   });
 	
-	const swiperApp = new Swiper(".app-slider", {
-     slidesPerView: "auto",
-    // centeredSlides: true,
-    spaceBetween: 20,
-    loop: true,
-     autoplay: {
-      delay: 3000,           
-      disableOnInteraction: false, 
-    },
-    navigation: {
-      nextEl: ".swiper-button-next",
-      prevEl: ".swiper-button-prev",
-    },
-   
-  });
+const swiperApp = new Swiper(".app-slider", {
+  slidesPerView: "auto",
+  centeredSlides: true,
+  spaceBetween: 20,
+  loop: true,
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+});
 
 
   const team = new Swiper(".team-slider", {
